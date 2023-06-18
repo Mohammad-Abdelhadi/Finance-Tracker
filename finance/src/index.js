@@ -10,13 +10,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Splash />}/>
-        {/* <Route path='Signup' element={<Signup/>} /> */}
-     
-      </Routes>
-    </BrowserRouter>
+   
     <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
