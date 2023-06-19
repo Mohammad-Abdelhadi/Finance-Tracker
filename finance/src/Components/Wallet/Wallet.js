@@ -29,7 +29,7 @@ function Wallet() {
                 </div>
         <div className='Transictions'>
        <div className='internal-content'>
-        <Link to="/expense">     <img src={Add} alt="" /></Link>
+       <Link to="/expense">     <img src={Add} alt="" /></Link>
         <Link to="/expense">          <img src={Pay} alt="" />
  </Link>
         <Link to="/expense"> 
