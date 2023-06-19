@@ -1,0 +1,74 @@
+@import url(../../App.css);
+@import url(../../index.css);
+
+/* :root {
+  --primaryblue:#58A9F5;
+  --Secondaryblue: #0C79DD;
+  --linearblue:background: linear-gradient(180deg, #5DAEFA -17.19%, #0071D9 123.44%);
+  --green:#25A969;
+  --red:#F95B51;
+  --white: #ffffff;
+  --black:#000000;
+
+} */
+
+.wallet-container {
+  position: relative;
+  height: 100vh;
+  overflow: auto;
+}
+
+.first-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 40%;
+  background-size: cover;
+  background-image: url("../../Images/backgroundWallet.png");
+}
+
+.second-background {
+  position: fixed;
+  top: 34%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 97%;
+  height: auto;
+  background-size: cover;
+  background-image: url("../../Images/whitebackground.png");
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.text {
+  text-align: center;
+  color: #666666;
+  font-weight: normal;
+}
+.phoneBar{
+  
+  width: 100%;
+  position: absolute;
+  z-index: 999999;
+  padding: 16px;
+
+}
+.buttons{
+  width: 100%;
+  position: absolute;
+  z-index: 999999;
+  padding: 16px;
+  display: flex;
+align-items: center;
+top: 10%;
+justify-content: space-between;
+}
+#wallet{
+  color: var(--white);
+}
