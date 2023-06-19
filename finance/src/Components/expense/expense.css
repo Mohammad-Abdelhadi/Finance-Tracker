@@ -1,4 +1,12 @@
 main{
-    background-image: url('../../../public/img/Background.svg');
+    background-image: url('../../Images/Background.svg');
     background-size: cover;
+}
+
+#mobile__icon{
+    margin-left: 1.9rem;
+}
+
+Link{
+    text-decoration: none;
 }
