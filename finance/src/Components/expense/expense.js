@@ -3,22 +3,22 @@ import "./expense.css";
 import Time from "../../Images/Time.svg";
 import Bettery from "../../Images/Battery.svg";
 import ArrowBack from "../../Images/ArrowBack.svg";
-import ThreeDot from "../../Images/ThreeDot.svg";
+import ThreeDot from "../../Images/BlackThreeDot.svg";
 
 import { Link } from "react-router-dom";
 
 const Expense = () => {
   return (
     <>
-      <main className="container">
+      <main id="expense__page" className="container">
         <div className="row position-relative">
           {/* Mobile Info In top */}
-          <div className="col-12">
+          <div className="col-12 center__battery">
             <div className="d-flex justify-content-between">
-              <div className="">
+              <div>
                 <img alt="#" src={Time} />
               </div>
-              <div className="">
+              <div>
                 <img alt="#" src={Bettery} />
               </div>
             </div>
@@ -26,16 +26,15 @@ const Expense = () => {
           {/* Arrow Back and Three dot and page name */}
           <div className="col-12">
             <div className="d-flex justify-content-around mt-5">
-              <div className="">
-                {" "}
-                <img alt="#" src={ArrowBack} className="" />{" "}
+              <div>
+                <img alt="#" src={ArrowBack} />{" "}
               </div>
-              <div className="">
+              <div>
                 <Link className="text__edit" to="#">
                   Add Expense or Income
                 </Link>
               </div>
-              <div className="">
+              <div>
                 <img alt="#" src={ThreeDot} />
               </div>
             </div>
@@ -86,6 +85,7 @@ const Expense = () => {
             />
           </div>
         </form>
+        {/* Button Add  */}
         <div className="container position-absolute add__btn">
           <div className="my-3">
             <button className="btn w-100">Add</button>

@@ -1,4 +1,4 @@
-main{
+#expense__page{
     background-image: url('../../Images/Background.svg');
     background-size: cover;
     height: 287px;
@@ -42,3 +42,9 @@ border-radius: 20px;
    color: #fff;
 
 }
+
+.center__battery{
+    width: 85%;
+    margin: 0 auto;
+}
+
