@@ -5,6 +5,7 @@ import './App.css';
 import Splash from './Components/Splash/splash';
 
 import { Routes,Route } from 'react-router-dom';
+import Home from './Components/Home/Home';
 function App() {
   return (
     <div className="App">
