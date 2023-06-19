@@ -6,7 +6,7 @@ const Expense = () => {
     <>
       <main className="container">
         <div className="row">
-          <div className="col-12"><img alt="#" src="./img/Mobile.svg" /></div>
+          <div className="col-12 p-5"><img alt="#" src="./img/Mobile.svg" /></div>
         </div>
       </main>
     </>
