@@ -130,7 +130,7 @@ const Statistic = () => {
                 </div>
               </div>
               <div>
-                <p style={{color: "red"}}>-$800</p>
+                <p style={{ color: "red" }}>-$800</p>
               </div>
             </div>
             <div className="transiction">
@@ -144,7 +144,7 @@ const Statistic = () => {
                 </div>
               </div>
               <div>
-                <p style={{color: "red"}}>-$800</p>
+                <p style={{ color: "red" }}>-$800</p>
               </div>
             </div>
             <div className="transiction">
@@ -158,7 +158,7 @@ const Statistic = () => {
                 </div>
               </div>
               <div>
-                <p style={{color: "red"}}>-$800</p>
+                <p style={{ color: "red" }}>-$800</p>
               </div>
             </div>
           </div>

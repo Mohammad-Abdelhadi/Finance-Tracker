@@ -3,7 +3,7 @@ import "./expense.css";
 import Time from "../../Images/Time.svg";
 import Bettery from "../../Images/Battery.svg";
 import ArrowBack from "../../Images/ArrowBack.svg";
-import ThreeDot from "../../Images/BlackThreeDot.svg";
+import ThreeDot from "../../Images/ThreeDot.svg";
 
 import { Link } from "react-router-dom";
 
