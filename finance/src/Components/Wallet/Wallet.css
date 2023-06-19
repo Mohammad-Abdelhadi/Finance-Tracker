@@ -30,7 +30,8 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;overflow: scroll;
+  padding: 0px 0 220px 0;
 }
 
 .Content {
@@ -96,4 +97,38 @@
 }
 .internal-titles:last-child{
   margin: 2px 3px;
+}
+.transictions-details{
+  display: flex;
+  justify-content: center;
+  background-color: #F4F6F6;
+  width: 70%;
+  border-radius: 10px;
+  margin: 30px 0 ;
+  font-weight: bold;
+}
+
+.transiction{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  width: 90%;
+  
+}
+.left-side{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.left-side div :nth-child(1) {
+font-weight: 500;
+}
+.left-side div :nth-child(2) {
+
+color: rgb(117, 117, 117);
+font-size: 12px;
+}
+.loss{
+  color: var(--red);
 }

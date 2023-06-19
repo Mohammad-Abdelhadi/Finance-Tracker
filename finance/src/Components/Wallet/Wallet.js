@@ -6,6 +6,8 @@ import Add from "../../Images/Add.svg"
 import Pay from "../../Images/Pay.svg"
 import Income from "../../Images/income.svg"
 import "./Wallet.css";
+import YouTube from "../../Images/YouTubeIcon.svg";
+
 import { Link } from 'react-router-dom';
 
 function Wallet() {
@@ -49,9 +51,169 @@ function Wallet() {
       
 
         </div>
- 
 
         </div>
+ <div className='transictions-details'>
+  Transiciotns
+ </div>
+ {/* <p>jsaoidjiosajd</p>
+ <p>jsaoidjiosajd</p>
+ <p>jsaoidjiosajd</p>
+ <p>jsaoidjiosajd</p>
+ <p>jsaoidjiosajd</p>
+ <p>jsaoidjiosajd</p>
+ <p>jsaoidjiosajd</p>
+ <p>jsaoidjiosajd</p>
+ <p>jsaoidjiosajd</p>
+ <p>jsaoidjiosajd</p>
+ <p>jsaoidjiosajd</p>
+ <p>jsaoidjiosajd</p>
+ <p>jsaoidjiosajd</p>
+ <p>jsaoidjiosajd</p>
+ <p>jsaoidjiosajd</p> */}
+
+<div className="transiction">
+              <div className="left-side">
+                <div>
+                  <img src={YouTube} alt="" />
+                </div>
+                <div>
+                  <h6>YouTube</h6>
+                  <h6>Today</h6>
+                </div>
+              </div>
+              <div>
+                <p className='loss' >-$800</p>
+              </div>
+            </div>
+<div className="transiction">
+              <div className="left-side">
+                <div>
+                  <img src={YouTube} alt="" />
+                </div>
+                <div>
+                  <h6>YouTube</h6>
+                  <h6>Today</h6>
+                </div>
+              </div>
+              <div>
+                <p className='loss' >-$800</p>
+              </div>
+            </div>
+<div className="transiction">
+              <div className="left-side">
+                <div>
+                  <img src={YouTube} alt="" />
+                </div>
+                <div>
+                  <h6>YouTube</h6>
+                  <h6>Today</h6>
+                </div>
+              </div>
+              <div>
+                <p className='loss' >-$800</p>
+              </div>
+            </div>
+<div className="transiction">
+              <div className="left-side">
+                <div>
+                  <img src={YouTube} alt="" />
+                </div>
+                <div>
+                  <h6>YouTube</h6>
+                  <h6>Today</h6>
+                </div>
+              </div>
+              <div>
+                <p className='loss' >-$800</p>
+              </div>
+            </div>
+<div className="transiction">
+              <div className="left-side">
+                <div>
+                  <img src={YouTube} alt="" />
+                </div>
+                <div>
+                  <h6>YouTube</h6>
+                  <h6>Today</h6>
+                </div>
+              </div>
+              <div>
+                <p className='loss' >-$800</p>
+              </div>
+            </div>
+<div className="transiction">
+              <div className="left-side">
+                <div>
+                  <img src={YouTube} alt="" />
+                </div>
+                <div>
+                  <h6>YouTube</h6>
+                  <h6>Today</h6>
+                </div>
+              </div>
+              <div>
+                <p className='loss' >-$800</p>
+              </div>
+            </div>
+            {/* start transictions */}
+<div className="transiction">
+              <div className="left-side">
+                <div>
+                  <img src={YouTube} alt="" />
+                </div>
+                <div>
+                  <h6>YouTube</h6>
+                  <h6>Today</h6>
+                </div>
+              </div>
+              <div>
+                <p className='loss' >-$800</p>
+              </div>
+            </div>
+<div className="transiction">
+              <div className="left-side">
+                <div>
+                  <img src={YouTube} alt="" />
+                </div>
+                <div>
+                  <h6>YouTube</h6>
+                  <h6>Today</h6>
+                </div>
+              </div>
+              <div>
+                <p className='loss' >-$800</p>
+              </div>
+            </div>
+<div className="transiction">
+              <div className="left-side">
+                <div>
+                  <img src={YouTube} alt="" />
+                </div>
+                <div>
+                  <h6>YouTube</h6>
+                  <h6>Today</h6>
+                </div>
+              </div>
+              <div>
+                <p className='loss' >-$800</p>
+              </div>
+            </div>
+<div className="transiction">
+              <div className="left-side">
+                <div>
+                  <img src={YouTube} alt="" />
+                </div>
+                <div>
+                  <h6>YouTube</h6>
+                  <h6>Today</h6>
+                </div>
+              </div>
+              <div>
+                <p className='loss' >-$800</p>
+              </div>
+            </div>
+            {/* end transiction */}
         </div>
           
       </div>
