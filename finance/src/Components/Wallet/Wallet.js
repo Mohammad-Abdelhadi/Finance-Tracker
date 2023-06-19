@@ -7,6 +7,8 @@ import Pay from "../../Images/Pay.svg"
 import Income from "../../Images/income.svg"
 import "./Wallet.css";
 import YouTube from "../../Images/YouTubeIcon.svg";
+import Paypal from "../../Images/paypal.svg"
+import upwork from "../../Images/upwork.svg"
 
 import { Link } from 'react-router-dom';
 
@@ -103,15 +105,43 @@ function Wallet() {
 <div className="transiction">
               <div className="left-side">
                 <div>
-                  <img src={YouTube} alt="" />
+                  <img src={Paypal} alt="" />
                 </div>
                 <div>
-                  <h6>YouTube</h6>
+                  <h6>Paypal</h6>
                   <h6>Today</h6>
                 </div>
               </div>
               <div>
                 <p className='loss' >-$800</p>
+              </div>
+            </div>
+<div className="transiction">
+              <div className="left-side">
+                <div>
+                  <img src={Paypal} alt="" />
+                </div>
+                <div>
+                  <h6>Paypal</h6>
+                  <h6>Today</h6>
+                </div>
+              </div>
+              <div>
+                <p className='green' >+800$</p>
+              </div>
+            </div>
+<div className="transiction">
+              <div className="left-side">
+                <div>
+                  <img src={Paypal} alt="" />
+                </div>
+                <div>
+                  <h6>Paypal</h6>
+                  <h6>Today</h6>
+                </div>
+              </div>
+              <div>
+                <p className='green' >+800$</p>
               </div>
             </div>
 <div className="transiction">
@@ -125,64 +155,36 @@ function Wallet() {
                 </div>
               </div>
               <div>
-                <p className='loss' >-$800</p>
-              </div>
-            </div>
-<div className="transiction">
-              <div className="left-side">
-                <div>
-                  <img src={YouTube} alt="" />
-                </div>
-                <div>
-                  <h6>YouTube</h6>
-                  <h6>Today</h6>
-                </div>
-              </div>
-              <div>
-                <p className='loss' >-$800</p>
-              </div>
-            </div>
-<div className="transiction">
-              <div className="left-side">
-                <div>
-                  <img src={YouTube} alt="" />
-                </div>
-                <div>
-                  <h6>YouTube</h6>
-                  <h6>Today</h6>
-                </div>
-              </div>
-              <div>
-                <p className='loss' >-$800</p>
+                <p className='green' >+800$</p>
               </div>
             </div>
             {/* start transictions */}
 <div className="transiction">
               <div className="left-side">
                 <div>
-                  <img src={YouTube} alt="" />
+                  <img src={upwork} alt="" />
                 </div>
                 <div>
-                  <h6>YouTube</h6>
+                  <h6>upwork</h6>
                   <h6>Today</h6>
                 </div>
               </div>
               <div>
-                <p className='loss' >-$800</p>
+                <p className='green' >+800$</p>
               </div>
             </div>
 <div className="transiction">
               <div className="left-side">
                 <div>
-                  <img src={YouTube} alt="" />
+                  <img src={upwork} alt="" />
                 </div>
                 <div>
-                  <h6>YouTube</h6>
+                  <h6>upwork</h6>
                   <h6>Today</h6>
                 </div>
               </div>
               <div>
-                <p className='loss' >-$800</p>
+                <p className='green' >-$800</p>
               </div>
             </div>
 <div className="transiction">

@@ -132,3 +132,6 @@ font-size: 12px;
 .loss{
   color: var(--red);
 }
+.green{
+  color: var(--green);
+}
