@@ -3,6 +3,11 @@ import BlackTime from "../../Images/BlackTime.svg";
 import BlackBattery from "../../Images/BlackBattery.svg";
 import ThreeDot from "../../Images/BlackThreeDot.svg";
 import Blackarrow from "../../Images/Blackarrow.svg";
+import Filter from "../../Images/Filter.svg";
+import YouTube from "../../Images/YouTubeIcon.svg";
+
+import "./Statistic.css";
+
 import { Link } from "react-router-dom";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
@@ -108,7 +113,56 @@ const Statistic = () => {
           <Doughnut data={data} options={options}></Doughnut>
         </div>
         {/* Top spending  */}
-        <div className="container"></div>
+        <div className="container">
+          <div className="transiction-container">
+            <div className="Transiction-history">
+              <p>Top Spending</p>
+              <img alt="#" src={Filter} />
+            </div>
+            <div className="transiction">
+              <div className="left-side">
+                <div>
+                  <img src="" alt="" />
+                </div>
+                <div>
+                  <p>Upwork</p>
+                  <p>Today</p>
+                </div>
+              </div>
+              <div>
+                <p style={{color: "red"}}>-$800</p>
+              </div>
+            </div>
+            <div className="transiction">
+              <div className="left-side">
+                <div>
+                  <img src="" alt="" />
+                </div>
+                <div>
+                  <p>Upwork</p>
+                  <p>Today</p>
+                </div>
+              </div>
+              <div>
+                <p style={{color: "red"}}>-$800</p>
+              </div>
+            </div>
+            <div className="transiction">
+              <div className="left-side">
+                <div>
+                  <img src={YouTube} alt="" />
+                </div>
+                <div>
+                  <h6>YouTube</h6>
+                  <h6>Today</h6>
+                </div>
+              </div>
+              <div>
+                <p style={{color: "red"}}>-$800</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
     </>
   );
