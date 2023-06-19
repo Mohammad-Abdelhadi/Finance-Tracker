@@ -16,13 +16,13 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 const Statistic = () => {
   const data = {
-    labels: ["Active", "Inactive"],
+    labels: ["Active", "Inactive", "Ehab", "Mohammad", "Rawan", "Farah"],
     datasets: [
       {
         label: "poll",
-        data: [3, 6],
-        backgroundColor: ["aqua", "black"],
-        borderColor: ["aqua", "black"],
+        data: [3, 6, 9, 9, 9, 9],
+        backgroundColor: ["aqua", "black", "red", "green", "yellow", "blue"],
+        borderColor: ["aqua", "black", "red", "green", "yellow", "blue"],
       },
     ],
   };
@@ -47,7 +47,9 @@ const Statistic = () => {
         <div className="col-12">
           <div className="d-flex justify-content-around mt-5">
             <div>
-              <img alt="#" src={Blackarrow} />{" "}
+              <Link to="/HomePage">
+                <img alt="#" src={Blackarrow} />
+              </Link>
             </div>
             <div>
               <Link

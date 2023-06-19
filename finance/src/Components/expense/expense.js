@@ -27,7 +27,9 @@ const Expense = () => {
           <div className="col-12">
             <div className="d-flex justify-content-around mt-5">
               <div>
-                <img alt="#" src={ArrowBack} />{" "}
+                <Link to="/Wallet">
+                <img alt="#" src={ArrowBack} />
+                </Link>
               </div>
               <div>
                 <Link className="text__edit" to="#">
