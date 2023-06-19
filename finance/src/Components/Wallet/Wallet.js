@@ -15,7 +15,7 @@ function Wallet() {
     <div className="wallet-container">
       <img src={Mobile} alt="" className='phoneBar'/>
 <div className='buttons'> 
-<p><img src={Arrow} alt="" /></p>
+<Link to="/home"> <img src={Arrow} alt="" /></Link>
 <p id='wallet'>Wallet</p>
 <p><img src={bell} alt="" /></p>
 </div>
