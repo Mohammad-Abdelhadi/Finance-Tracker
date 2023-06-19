@@ -1,7 +1,7 @@
 import React from "react";
 import "./expense.css";
 import Time from "../../Images/Time.svg";
-import Bettery from "../../Images/Battery.svg";
+import Battery from "../../Images/Battery.svg";
 import ArrowBack from "../../Images/ArrowBack.svg";
 import ThreeDot from "../../Images/ThreeDot.svg";
 
@@ -19,7 +19,7 @@ const Expense = () => {
                 <img alt="#" src={Time} />
               </div>
               <div>
-                <img alt="#" src={Bettery} />
+                <img alt="#" src={Battery} />
               </div>
             </div>
           </div>
