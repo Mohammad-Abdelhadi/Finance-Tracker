@@ -1,17 +1,3 @@
-@import url(../../App.css);
-@import url(../../index.css);
-
-/* :root {
-  --primaryblue:#58A9F5;
-  --Secondaryblue: #0C79DD;
-  --linearblue:background: linear-gradient(180deg, #5DAEFA -17.19%, #0071D9 123.44%);
-  --green:#25A969;
-  --red:#F95B51;
-  --white: #ffffff;
-  --black:#000000;
-
-} */
-
 .wallet-container {
   position: relative;
   height: 100vh;
@@ -24,51 +10,90 @@
   left: 0;
   z-index: 1;
   width: 100%;
-  height: 40%;
-  background-size: cover;
+  height: 53%;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-image: url("../../Images/backgroundWallet.png");
 }
 
 .second-background {
+  background-image: url("../../Images/whitebackground.png");
   position: fixed;
-  top: 34%;
+  top: 74%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  width: 97%;
-  height: auto;
-  background-size: cover;
-  background-image: url("../../Images/whitebackground.png");
+  width: 80%;
+  height: 100%;
+  background-size: contain;
   display: flex;
-  padding: 10px;
   align-items: center;
   display: flex;
   flex-direction: column;
+  background-repeat: no-repeat;
 }
 
-.text {
+.Content {
+  padding: 40px 0 0 0;
+}
+
+.normal-text {
   text-align: center;
   color: #666666;
   font-weight: normal;
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
 }
-.phoneBar{
-  
+
+.phoneBar {
   width: 100%;
   position: absolute;
   z-index: 999999;
   padding: 16px;
-
 }
-.buttons{
+
+.buttons {
   width: 100%;
   position: absolute;
   z-index: 999999;
   padding: 16px;
   display: flex;
-align-items: center;
-top: 10%;
-justify-content: space-between;
+  align-items: center;
+  top: 10%;
+  justify-content: space-between;
 }
-#wallet{
+
+#wallet {
   color: var(--white);
+}
+
+.Transictions img {
+  margin: 0px 10px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.Transictions .internal-content {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.internal-titles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.internal-titles span {
+  flex: 1;
+  text-align: center;
+  font-size: 10px;
+}
+.internal-titles:last-child{
+  margin: 2px 3px;
 }
