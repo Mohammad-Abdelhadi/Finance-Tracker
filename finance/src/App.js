@@ -11,6 +11,7 @@ import Signin from "./Components/sign_in/signin";
 import Signup from "./Components/sign_up/signup";
 import Statistic from "./Components/Statistic/Statistic";
 import Wallet from "./Components/Wallet/Wallet";
+import Expense from "./Components/expense/expense";
 function App() {
   return (
     <div className="App">
