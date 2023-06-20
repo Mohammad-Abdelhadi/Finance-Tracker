@@ -112,7 +112,7 @@ margin-top:0.4rem;
 
 .transiction-container{
     margin-top: 6rem;
-    max-width: 85%;
+    max-width: 100%;
     
     margin: 6rem auto;
 }
@@ -126,11 +126,12 @@ margin-top:0.4rem;
 .Transiction-history :nth-child(2){
     color: rgb(117, 117, 117);
 }
-.transiction{
+.transiction__homepage{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 1rem;
+    width: 100%;
 }
 .left-side{
     display: flex;
