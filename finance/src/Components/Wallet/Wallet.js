@@ -28,7 +28,7 @@ function Wallet() {
           <div className='Content'
           >
             <p className="normal-text">Total Balance</p>
-            <p className="text">$2,549.00</p>
+            <p className="wallet-balance">$2,549.00</p>
 
                 </div>
         <div className='Transictions'>
