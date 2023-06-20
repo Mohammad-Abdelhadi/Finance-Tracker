@@ -43,12 +43,12 @@ const Expense = () => {
             </div>
           </div>
           {/* Cards that includes Form and input */}
-          <form className="position-absolute z-1 center__cards p-4">
+          <form className="position-absolute z-1 center__cards p-3">
             <div className="my-3">
-              <label for="process">Process:</label>
+              <label for="process">Process :</label>
               <select
                 id="process"
-                className="form-select"
+                className="form-select mt-2"
                 aria-label="Default select example"
               >
                 <option selected>Choose Your Process</option>
@@ -57,13 +57,13 @@ const Expense = () => {
               </select>
             </div>
             <div className="my-3">
-              <label for="process">Process:</label>
+              <label for="process">Categories :</label>
               <select
                 id="process"
-                className="form-select"
+                className="form-select mt-2"
                 aria-label="Default select example"
               >
-                <option selected>Choose Your Process</option>
+                <option selected>Choose</option>
                 <option value="car">Car</option>
                 <option value="bill">Bill</option>
                 <option value="rent">Rent</option>
@@ -77,7 +77,7 @@ const Expense = () => {
               <input
                 id="amount"
                 type="number"
-                className="form-control"
+                className="form-control mt-2"
                 aria-label="Sizing example input"
                 aria-describedby="inputGroup-sizing-default"
               />
