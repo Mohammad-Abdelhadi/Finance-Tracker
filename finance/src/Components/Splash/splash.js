@@ -1,9 +1,24 @@
-import React from 'react'
+import React from "react";
+import "./splash.css";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Splash = () => {
-  return (
-    <div>splash</div>
-  )
-}
+  const navigate = useNavigate();
 
-export default Splash
+  useEffect(() => {
+    const redirectTimeout = setTimeout(() => {
+      navigate("/homepage"); // Replace '/home' with your home page URL
+    }, 3000);
+
+    return () => clearTimeout(redirectTimeout);
+  }, [navigate]);
+
+  return (
+    <div className="splash__container">
+      <div className="logo">MONO</div>
+    </div>
+  );
+};
+
+export default Splash;
