@@ -90,7 +90,7 @@ const Expense = () => {
         {/* Button Add  */}
         <div className="container position-absolute add__btn">
           <div className="my-3">
-            <button className="btn w-100">Add</button>
+            <button className="btn w-100 ">Add</button>
           </div>
         </div>
       </main>
