@@ -3,7 +3,9 @@
     background-size: cover;
     height: 287px;
 }
-
+.ehab{
+    margin-bottom: 500px;
+}
 #mobile__icon{
     margin-left: 1.9rem;
 }
@@ -26,6 +28,7 @@ border-radius: 20px;
 .add__btn{
     margin-top: 10px;
     width: 80%;
+    height: 60px;
     top: 85%;
     left: 10%;
     border-radius: 40px;

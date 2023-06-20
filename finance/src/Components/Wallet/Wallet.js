@@ -72,8 +72,8 @@ function Wallet() {
  <p>jsaoidjiosajd</p>
  <p>jsaoidjiosajd</p>
  <p>jsaoidjiosajd</p>
- <p>jsaoidjiosajd</p> */}
-
+<p>jsaoidjiosajd</p> */}
+<div className="transiction-scroll">
 <div className="transiction">
               <div className="left-side">
                 <div>
@@ -216,6 +216,7 @@ function Wallet() {
               </div>
             </div>
             {/* end transiction */}
+            </div>
         </div>
           
       </div>

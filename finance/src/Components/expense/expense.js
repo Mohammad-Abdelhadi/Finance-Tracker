@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 const Expense = () => {
   return (
     <>
+    <div className="ehab">
       <main id="expense__page" className="container">
         <div className="row position-relative">
           {/* Mobile Info In top */}
@@ -90,10 +91,11 @@ const Expense = () => {
         {/* Button Add  */}
         <div className="container position-absolute add__btn">
           <div className="my-3">
-            <button className="btn w-100">Add</button>
+            <button className="btn w-100 ">Add</button>
           </div>
         </div>
       </main>
+      </div>
     </>
   );
 };

@@ -135,3 +135,9 @@ font-size: 12px;
 .green{
   color: var(--green);
 }
+.transiction-scroll{
+  display: flex;
+    flex-direction: column;
+    width: 90%;
+    overflow: scroll;
+}
