@@ -45,7 +45,7 @@ const Expense = () => {
           {/* Cards that includes Form and input */}
           <form className="position-absolute z-1 center__cards p-3">
             <div className="my-3">
-              <label for="process">Process :</label>
+              <label htmlFor="process">Process :</label>
               <select
                 id="process"
                 className="form-select mt-2"
@@ -57,7 +57,7 @@ const Expense = () => {
               </select>
             </div>
             <div className="my-3">
-              <label for="process">Categories :</label>
+              <label htmlFor="process">Categories :</label>
               <select
                 id="process"
                 className="form-select mt-2"
@@ -73,7 +73,7 @@ const Expense = () => {
               </select>
             </div>
             <div className="my-3">
-              <label for="amount">Amount:</label>
+              <label htmlFor="amount">Amount:</label>
               <input
                 id="amount"
                 type="number"
