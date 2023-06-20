@@ -1,17 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
 // import Home from "./Components/Home"
-import {BrowserRouter ,Routes,Route } from 'react-router-dom';
-import Splash from './Components/Splash/splash';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Splash from "./Components/Splash/splash";
 // import Signup from './Components/Signup';
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-   
-    <App />
+      <App />
     </BrowserRouter>
   </React.StrictMode>
 );

@@ -1,10 +1,10 @@
 import "./App.css";
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.js';
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap.js";
 import Splash from "./Components/Splash/splash";
-import Onboarding from './Components/onboarding/onboarding'
-import { Routes,Route } from 'react-router-dom';
-import Home from './Components/Home/Home';
+import Onboarding from "./Components/onboarding/onboarding";
+import { Routes, Route, useLocation } from "react-router-dom";
+import Home from "./Components/Home/Home";
 import Signin from "./Components/sign_in/signin";
 import Signup from "./Components/sign_up/signup";
 import Statistic from "./Components/Statistic/Statistic";
@@ -26,9 +26,8 @@ function App() {
         <Route path="/expense" element={<Expense />} />
         <Route path="/statistic" element={<Statistic />} />
         <Route path="/Wallet" element={<Wallet />} />
-       
       </Routes>
- {/* <Navbar /> */}
+      {!isSplashPage && <Navbar />}
     </div>
   );
 }
