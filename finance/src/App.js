@@ -11,12 +11,15 @@ import Statistic from "./Components/Statistic/Statistic";
 import Wallet from "./Components/Wallet/Wallet";
 import Expense from "./Components/expense/expense";
 import Navbar from "./Components/Navbar/Navbar";
-import { useLocation } from "react-router-dom";
 
 function App() {
-  
+  const location = useLocation();
+
+  // Check if the current route is the Splash page
+  const isSplashPage = location.pathname === "/";
   return (
     <div className="App">
+
       <Routes>
         <Route path="/" element={<Splash />} />
         <Route path="/onboarding" element={<Onboarding />} />
