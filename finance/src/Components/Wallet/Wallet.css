@@ -19,7 +19,7 @@
 .second-background {
   background-image: url("../../Images/whitebackground.png");
   position: fixed;
-  top: 74%;
+  top: 68%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -45,6 +45,13 @@
   font-size: 12px;
   padding: 0;
   margin: 0;
+}
+.wallet-balance {
+  text-align: center;
+  font-size: xx-large;
+  color: #0071d9;
+  padding: 0;
+    margin: 0;
 }
 
 .phoneBar {

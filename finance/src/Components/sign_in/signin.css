@@ -1,0 +1,66 @@
+
+.sign_mono{
+ 
+    padding-right: 15%;
+    margin-bottom: 10%;
+}
+.input{
+    margin-top: 20%;
+    margin-left: -20%;
+    
+}
+.input div input  {
+    background-color: #f2f9ff;
+    color: #65b2fa;
+    padding: 10%;
+    padding-right: 30%;
+    margin-bottom: 20%;
+    border: none;
+}
+.input div input:focus{
+    outline: none;
+    
+}
+::placeholder{
+    color: #65b2fa;
+    
+}
+.forgot_pas
+{
+      margin-left: -15%;
+      font-size: small;
+      color: #B0B0B0;
+
+  }
+.have_account
+{
+      margin-left: 15%;
+  }
+  .have_account a {
+   text-decoration: none;
+  
+  }
+  .have_account a  span{
+    color: #0071d9;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+  }
+.continue_with
+{
+      margin-left: 35%;
+      
+      color: #B0B0B0;
+
+  }
+  .btn_sign_in{
+    text-align: center;
+  overflow-wrap:normal ;
+    margin-left: 15%;
+    margin-top: 20%;
+    margin-bottom: 7%;
+    border-radius: 40px;
+    padding-left:30% ;
+    padding-right: 30%;
+    background: linear-gradient(180deg, #5DAEFA -17.19%, #0071D9 123.44%);
+    box-shadow: 0px 7px 20px  #55adff;
+  }

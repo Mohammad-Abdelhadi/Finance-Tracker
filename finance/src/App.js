@@ -11,7 +11,7 @@ import Statistic from "./Components/Statistic/Statistic";
 import Wallet from "./Components/Wallet/Wallet";
 import Expense from "./Components/expense/expense";
 import Navbar from "./Components/Navbar/Navbar";
-import UserProfile from "./Components/UserProfile/UserProfile";
+import UserProfile  from "./Components/UserProfile/UserProfileush"
 
 function App() {
   const location = useLocation();
@@ -20,6 +20,7 @@ function App() {
   const isSplashPage = location.pathname === "/";
   return (
     <div className="App">
+
       <Routes>
         <Route path="/" element={<Splash />} />
         <Route path="/onboarding" element={<Onboarding />} />
