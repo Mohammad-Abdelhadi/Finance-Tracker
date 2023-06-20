@@ -8,8 +8,8 @@ const Splash = () => {
 
   useEffect(() => {
     const redirectTimeout = setTimeout(() => {
-      navigate("/homepage"); // Replace '/home' with your home page URL
-    }, 3000);
+      navigate("/homepage"); 
+    }, 2000);
 
     return () => clearTimeout(redirectTimeout);
   }, [navigate]);

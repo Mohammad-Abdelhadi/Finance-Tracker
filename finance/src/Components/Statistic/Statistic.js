@@ -23,7 +23,9 @@ const Statistic = () => {
         data: [3, 6, 9, 9, 9, 9],
         backgroundColor: ["aqua", "black", "red", "green", "yellow", "blue"],
         borderColor: ["aqua", "black", "red", "green", "yellow", "blue"],
+       
       },
+      
     ],
   };
 

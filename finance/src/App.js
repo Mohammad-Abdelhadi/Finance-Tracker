@@ -11,7 +11,7 @@ import Statistic from "./Components/Statistic/Statistic";
 import Wallet from "./Components/Wallet/Wallet";
 import Expense from "./Components/expense/expense";
 import Navbar from "./Components/Navbar/Navbar";
-
+import UserProfile from "./Components/UserProfile/UserProfile";
 
 function App() {
   const location = useLocation();
@@ -29,10 +29,13 @@ function App() {
         <Route path="/expense" element={<Expense />} />
         <Route path="/statistic" element={<Statistic />} />
         <Route path="/Wallet" element={<Wallet />} />
+        <Route path="/UserProfile" element={<UserProfile />} />
+       
+
       </Routes>
       {!isSplashPage && <Navbar />}
     </div>
-  );
+  )
 }
 
 export default App;

@@ -8,6 +8,7 @@ import chart from '../../Images/chart.svg'
 import wallet from '../../Images/wallet.svg'
 import user from '../../Images/user.svg'
 import home from '../../Images/home.svg'
+import {Link} from "react-router-dom"
 
 <link
   rel="stylesheet"
@@ -18,26 +19,26 @@ import home from '../../Images/home.svg'
 const Navbar = () => {
   return (
     <Nav
-    activeKey="/home"
+    activeKey="home"
    
     className="navbar fixed-bottom navbar-light bg-light "
   >
     <Nav.Item>
-      <Nav.Link href="/">
+      <Link to="homepage">
         <img src={home} alt="" className='home'/>
-        </Nav.Link>
+        </Link>
     </Nav.Item>
     <Nav.Item>
-      <Nav.Link eventKey="link-1"><img src={chart} alt="" className='chart' /></Nav.Link>
+      <Link  to="/statistic" eventKey="statistic"><img src={chart} alt="" className='chart' /></Link>
     </Nav.Item>
   
-     <img src={plus} alt="" className='plus' />
+     <Link to ="expense"><img src={plus} alt="" className='plus' /></Link>
  
     <Nav.Item>
-      <Nav.Link eventKey="link-2"><img src={wallet} alt="" className='wallet'/></Nav.Link>
+      <Link to="Wallet" eventKey="Wallet"><img src={wallet} alt="" className='wallet'/></Link>
     </Nav.Item>
     <Nav.Item>
-      <Nav.Link eventKey="link-2"><img src={user} alt="" className='user'/></Nav.Link>
+      <Link to="UserProfile" eventKey="UserProfile"><img src={user} alt="" className='user'/></Link>
     </Nav.Item>
     
   </Nav>
