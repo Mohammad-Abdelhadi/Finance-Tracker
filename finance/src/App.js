@@ -11,7 +11,7 @@ import Statistic from "./Components/Statistic/Statistic";
 import Wallet from "./Components/Wallet/Wallet";
 import Expense from "./Components/expense/expense";
 import Navbar from "./Components/Navbar/Navbar";
-import UserProfile  from "./Components/UserProfile/UserProfileush"
+import UserProfile  from "./Components/UserProfile/UserProfile"
 
 function App() {
   const location = useLocation();
