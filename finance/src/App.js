@@ -5,7 +5,6 @@ import Splash from "./Components/Splash/splash";
 import Onboarding from './Components/onboarding/onboarding'
 import { Routes,Route } from 'react-router-dom';
 import Home from './Components/Home/Home';
-import Onboarding from "./Components/onboarding/onboarding";
 import Signin from "./Components/sign_in/signin";
 import Signup from "./Components/sign_up/signup";
 import Statistic from "./Components/Statistic/Statistic";
