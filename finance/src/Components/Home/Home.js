@@ -79,7 +79,7 @@ const Home = () => {
             <p>Transiction history</p>
             <p>see all</p>
             </div>
-        <div className="transiction">
+        <div className="transiction__homepage">
           <div className="left-side">
           <div><img src={upwork} alt="" /></div>
           <div>
@@ -91,7 +91,7 @@ const Home = () => {
             <p>-$800</p>
           </div>
         </div>
-        <div className="transiction">
+        <div className="transiction__homepage">
           <div className="left-side">
           <div><img src={upwork} alt="" /></div>
           <div>
@@ -103,7 +103,7 @@ const Home = () => {
             <p>-$800</p>
           </div>
         </div>
-        <div className="transiction">
+        <div className="transiction__homepage">
           <div className="left-side">
           <div><img src={upwork} alt="" /></div>
           <div>
@@ -115,7 +115,7 @@ const Home = () => {
             <p>-$800</p>
           </div>
         </div>
-        <div className="transiction">
+        <div className="transiction__homepage">
           <div className="left-side">
           <div><img src={upwork} alt="" /></div>
           <div>
@@ -127,7 +127,7 @@ const Home = () => {
             <p>-$800</p>
           </div>
         </div>
-        <div className="transiction">
+        <div className="transiction__homepage">
           <div className="left-side">
           <div><img src={upwork} alt="" /></div>
           <div>
@@ -139,7 +139,7 @@ const Home = () => {
             <p>-$800</p>
           </div>
         </div>
-        <div className="transiction">
+        <div className="transiction__homepage">
           <div className="left-side">
           <div><img src={upwork} alt="" /></div>
           <div>
