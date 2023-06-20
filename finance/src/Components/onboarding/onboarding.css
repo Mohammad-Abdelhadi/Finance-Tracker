@@ -1,0 +1,13 @@
+.text{
+    text-align:center;
+    font-size:xx-large;
+    color: #0071d9;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    }
+    .btn_start{
+        border-radius: 40px;
+    padding-left:25% ;
+    padding-right: 25%;
+    background: linear-gradient(180deg, #5DAEFA -17.19%, #0071D9 123.44%);
+    box-shadow: 0px 7px 20px  #55adff;
+    }
