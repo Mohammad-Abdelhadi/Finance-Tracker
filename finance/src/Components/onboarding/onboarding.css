@@ -1,8 +1,8 @@
 .text{
     text-align:center;
     font-size:xx-large;
-    margin-top: -25%;
-    color: #0071d9;
+    margin-top: 2rem;
+    color: #0071D9;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
     }
     .btn_start{
@@ -11,12 +11,24 @@
     padding-right: 25%;
     background: linear-gradient(180deg, #5DAEFA -17.19%, #0071D9 123.44%);
     box-shadow: 0px 7px 20px  #55adff;
+
     }
     .have_account{
 
-        font-size: small;
+        font-size: 14px;
+        margin-right: 3rem;
+ 
     }
     .log_in{
         color: #509fea;
         cursor: pointer;
+    }
+    .onboarding-container{
+        background-image: url(../../Images/onbrading.svg);
+        height:500px;
+     
+    }
+    .man__img{
+     margin-top: 2rem ; 
+      
     }

@@ -8,7 +8,7 @@ const Splash = () => {
 
   useEffect(() => {
     const redirectTimeout = setTimeout(() => {
-      navigate("/homepage"); 
+      navigate("/onboarding"); 
     }, 2000);
 
     return () => clearTimeout(redirectTimeout);

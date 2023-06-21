@@ -16,8 +16,10 @@ import UserProfile  from "./Components/UserProfile/UserProfile"
 function App() {
   const location = useLocation();
 
-  // Check if the current route is the Splash page
-  const isSplashPage = location.pathname === "/";
+  // Check if the current route is the selected pages
+  const isSplashPage = (location.pathname === "/" || location.pathname ==="/onboarding" 
+  || location.pathname ==="/signin" || location.pathname ==="/signup") ;
+
   return (
     <div className="App">
 
@@ -34,7 +36,8 @@ function App() {
        
 
       </Routes>
-      {!isSplashPage && <Navbar />}
+      { !isSplashPage && <Navbar />}
+     
     </div>
   )
 }

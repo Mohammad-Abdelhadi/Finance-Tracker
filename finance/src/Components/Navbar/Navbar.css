@@ -32,3 +32,12 @@ width:130px;
 .user{
     margin-right: 1rem;
 }
+
+@media (width:375){
+    .plus{
+        position: absolute;
+    left: 2rem;
+    bottom: 0.6rem;
+    width:130px;
+    }
+}
