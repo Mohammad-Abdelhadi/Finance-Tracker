@@ -15,6 +15,9 @@ import { db } from "./../expense/config/firebase";
 
 
 const Home = () => {
+  let index= localStorage.getItem("index")
+  let name =JSON.parse(localStorage.getItem("user name"))
+  let user_name = name[index]
   // Function that get the data from FirBase
   const [categoriesList, setCategoriesList] = useState([]);
   const expenseCollectionRef = collection(db, "expenses");
@@ -57,7 +60,7 @@ const Home = () => {
             <div className="name-container">
               <div>
                 <p>Welcome</p>
-                <p>Angela Jone</p>
+                <p>{user_name}</p>
               </div>
               <img src={ring} alt="" />
             </div>

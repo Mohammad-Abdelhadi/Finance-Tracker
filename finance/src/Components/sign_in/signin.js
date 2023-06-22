@@ -17,7 +17,7 @@ const Signin = () => {
     setEmail(e.target.value);
     setIsMatchEmail(false);
 
-    const storedEmails = JSON.parse(localStorage.getItem('gmail')) || [];
+    const storedEmails = JSON.parse(localStorage.getItem('gmail')) ;
     if (storedEmails.includes(e.target.value)) {
       setIndex(storedEmails.indexOf(e.target.value))
       console.log(index)
@@ -29,14 +29,19 @@ const Signin = () => {
     setpass(e.target.value);
     setIsMatchPass(false);
 
-    const storedPasswords = JSON.parse(localStorage.getItem('Pass')) || [];
+    const storedPasswords = JSON.parse(localStorage.getItem('Pass')) ;
     console.log(index)
 console.log(storedPasswords[index])
     if (storedPasswords[index]==( e.target.value)) {
       setIsMatchPass(true);
+
     }
   };
 
+  const onClick = (e) => {
+localStorage.setItem("index",index)
+
+  }
 
   return (
    <>
@@ -59,7 +64,7 @@ console.log(storedPasswords[index])
      </div>
     </div> 
     <div>
-      <button type="button" className="btn btn-primary btn_sign_in  py-3" disabled={!(isMatchEmail&&isMatchPass)} >
+      <button type="button" className="btn btn-primary btn_sign_in  py-3" disabled={!(isMatchEmail&&isMatchPass)} onClick={onClick}>
     <Link to='/HomePage'>  
    Sign In
    </Link>
