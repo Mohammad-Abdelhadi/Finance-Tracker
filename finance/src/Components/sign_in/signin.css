@@ -34,7 +34,8 @@
   }
 .have_account
 {
-      margin-left: 15%;
+      margin-left: 25%;
+      font-size: small;
   }
   .have_account a {
    text-decoration: none;
@@ -43,6 +44,7 @@
   .have_account a  span{
     color: #0071d9;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
   
   }
 .continue_with
@@ -63,4 +65,8 @@
     padding-right: 30%;
     background: linear-gradient(180deg, #5DAEFA -17.19%, #0071D9 123.44%);
     box-shadow: 0px 7px 20px  #55adff;
+  }
+  .btn_sign_in a{
+ text-decoration: none;
+ color: #f2f9ff;
   }
