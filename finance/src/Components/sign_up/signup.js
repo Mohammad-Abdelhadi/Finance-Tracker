@@ -65,11 +65,10 @@ const Signup = () => {
   return (
     <>
       <div className="container">
-        <div>your Logo</div>
+        <div className="singup-logo">your Logo</div>
         <div className="d-flex  flex-column align-items-center  input_up">
           <div className="sign_up ">
-            <h1>Sign in up</h1>
-            <h3>Lorem Ipsum is simply</h3>
+            <h1>Sign up</h1>
           </div>
           <form className="signUp_form d-flex  flex-column align-items-center">
             <div>
@@ -94,7 +93,7 @@ const Signup = () => {
             <div>
               <input
                 type="text"
-                placeholder="Create User name"
+                placeholder="Enter Username"
                 id="user_name"
                 required
                 onChange={handleChange_user_name}
@@ -102,14 +101,14 @@ const Signup = () => {
 
               <label></label>
             </div>
-            <div>
+            {/* <div>
               <input
                 type="number"
                 placeholder="Contact number"
                 required
               ></input>
               <label></label>
-            </div>
+            </div> */}
             <div>
               <input
                 type="password"
@@ -141,20 +140,20 @@ const Signup = () => {
                   : "Those passwords didn't match. Try again"}
               </label>
             </div>
-            <div>
+            <div className="btn__div">
               <button
                 type="submit"
                 className="btn btn-primary  py-3 btn_Register "
                 disabled={!(isValid && isValidPass && isValidcon_Pass)}
                 onClick={onClick}
               >
-                <Link to="/signin">Register</Link>
+                <Link to="/signin">Sign up</Link>
               </button>
             </div>
           </form>
         </div>
         <div className="continue_with mt-3">or continue with</div>
-        <div className="d-flex justify-content-center gap-3 my-5">
+        <div className="d-flex justify-content-center gap-3 my-3">
           <img src={facebook} width="10%" />
           <img src={apple} width="10%" />
           <img src={google} width="10%" />

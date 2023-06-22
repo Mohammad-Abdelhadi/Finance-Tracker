@@ -12,6 +12,7 @@ import { Doughnut } from "react-chartjs-2";
 // import from firebase to get data
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../expense/config/firebase";
+import Dollar from "../../Images/dollar-coin-svgrepo-com.svg";
 
 const Statistic = () => {
   ChartJS.register(ArcElement, Tooltip, Legend);
@@ -50,8 +51,8 @@ const Statistic = () => {
       {
         label: "poll",
         data: [...topSpendingData],
-        backgroundColor: ["orange", "black", "red"],
-        borderColor: ["orange", "black", "red"],
+        backgroundColor: ["#4185c6", "#5dbca4", "#fecf16"],
+        borderColor: ["#4185c6", "#5dbca4", "#fecf16"],
       },
     ],
   };
@@ -133,24 +134,24 @@ const Statistic = () => {
             Year
           </button>
         </div>
-        {/* Choose the data of charts */}
-        <div className="d-flex justify-content-end me-4">
-          <select
-            class="form-select form-select-lg mb-3  w-50"
-            aria-label=".form-select-lg example"
-          >
-            <option value="1">Expense</option>
-            <option value="2">Income</option>
-          </select>
-        </div>
         {/* Charts Container */}
-        <div className="container d-flex justify-content-center mt-5">
+        <div
+          style={{ width: "350px", height: "300px" }}
+          className="container d-flex justify-content-center mt-5"
+        >
           <Doughnut data={data} options={options}></Doughnut>
         </div>
         {/* Top spending  */}
         <div className="container">
           <div className="transiction-container">
-            <div className="Transiction-history">
+            <div
+              className="Transiction-history"
+              style={{
+                display: "flex",
+                gap: "0 160px",
+                justifyContent: "start",
+              }}
+            >
               <p>Top Spending</p>
               <img alt="#" src={Filter} />
             </div>
@@ -158,18 +159,24 @@ const Statistic = () => {
               {/* start transictions */}
               {
                 categoriesList
-                  .sort((a, b) => b.expense - a.expense) // Sort the transactions in descending order based on expense
+                  .sort((a, b) => b.expense - a.expense)
                   .map((card) => (
-                    <div className="transiction" key={card.id}>
+                    <div
+                      style={{ width: "100%" }}
+                      className="transiction"
+                      key={card.id}
+                    >
                       <div className="left-side">
-                        <div></div>
+                        <div>
+                          <img src={Dollar} alt="#" />
+                        </div>
                         <div>
                           <h6>{card.categories}</h6>
                           <h6>{card.date}</h6>
                         </div>
                       </div>
                       <div>
-                        <p style={{ color: "red" }}>-{card.expense}$</p>
+                        <p style={{ color: "red" }}>-${card.expense}</p>
                       </div>
                     </div>
                   ))

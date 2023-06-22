@@ -1,35 +1,41 @@
-.transiction-container{
+.transiction-container {
     margin-top: 6rem;
     max-width: 85%;
-
     margin: 6rem auto;
 }
-.Transiction-history{
+
+.Transiction-history {
     display: flex;
     justify-content: space-between;
 }
-.Transiction-history :nth-child(1){
+
+.Transiction-history :nth-child(1) {
     font-weight: 500;
 }
-.Transiction-history :nth-child(2){
+
+.Transiction-history :nth-child(2) {
     color: rgb(117, 117, 117);
 }
-.transiction{
+
+.transiction {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 1rem;
 }
-.left-side{
+
+.left-side {
     display: flex;
     gap: 1rem;
     align-items: center;
 }
+
 .left-side div :nth-child(1) {
-  font-weight: 500;
+    font-weight: 500;
 }
+
 .left-side div :nth-child(2) {
 
-  color: rgb(117, 117, 117);
-  font-size: 12px;
+    color: rgb(117, 117, 117);
+    font-size: 12px;
 }

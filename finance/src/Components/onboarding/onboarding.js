@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./onboarding.css";
 // import {useParams} from 'react-router-dom'
 import newman from "../../Images/newman.png";
-import onbarding from "../../Images/onbarding.svg";
+import onboardingback from "../../Images/onboardingback.svg";
 import { Link, useLocation } from "react-router-dom";
 const Onboarding = () => {
   // const params = useParams()
@@ -16,7 +16,7 @@ const Onboarding = () => {
       <div
         className="d-flex align-items-center flex-column onboarding-container"
         style={{
-          backgroundImage: `url(${onbarding})`,
+          backgroundImage: `url(${onboardingback})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
