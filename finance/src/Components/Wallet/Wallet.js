@@ -6,8 +6,6 @@ import Add from "../../Images/Add.svg";
 import Pay from "../../Images/Pay.svg";
 import Income from "../../Images/income.svg";
 import "./Wallet.css";
-import YouTube from "../../Images/YouTubeIcon.svg";
-import Paypal from "../../Images/paypal.svg";
 import upwork from "../../Images/upwork.svg";
 import { Link } from "react-router-dom";
 // import from firebase to get data
@@ -70,7 +68,7 @@ function Wallet() {
               <span>Income</span>
             </div>
           </div>
-          <div className="transictions-details">Transiciotns</div>
+          <div className="transictions-details">Transactions</div>
           <div className="transiction-scroll">
             {/* start transictions */}
             <div className="transiction-scroll">

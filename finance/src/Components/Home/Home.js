@@ -12,6 +12,8 @@ import upwork from "../../Images/upwork.svg";
 import { getDocs, collection } from "firebase/firestore";
 import { db } from "./../expense/config/firebase";
 
+
+
 const Home = () => {
   // Function that get the data from FirBase
   const [categoriesList, setCategoriesList] = useState([]);
