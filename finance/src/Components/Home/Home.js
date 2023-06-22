@@ -11,12 +11,11 @@ import upwork from "../../Images/upwork.svg";
 // import from firebase to get data
 import { getDocs, collection } from "firebase/firestore";
 import { db } from "./../expense/config/firebase";
-let index= localStorage.getItem("index")
-let name =JSON.parse(localStorage.getItem("user name"))
-let user_name = name[index]
-console.log(user_name)
-console.log(user_name)
+
 const Home = () => {
+  let index= localStorage.getItem("index")
+  let name =JSON.parse(localStorage.getItem("user name"))
+  let user_name = name[index]
   // Function that get the data from FirBase
   const [categoriesList, setCategoriesList] = useState([]);
   const expenseCollectionRef = collection(db, "expenses");

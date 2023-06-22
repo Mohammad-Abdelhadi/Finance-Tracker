@@ -11,12 +11,12 @@ import data from "../../Images/data.svg"
 import security from "../../Images/security.svg"
 import message from "../../Images/message.svg"
 import diamond from "../../Images/diamond.svg"
+
+
+const UserProfile = () => {
 let index= localStorage.getItem("index")
 let name =JSON.parse(localStorage.getItem("user name"))
 let user_name = name[index]
-
-const UserProfile = () => {
-
   return (
     
         <div className="user__profile__container">
