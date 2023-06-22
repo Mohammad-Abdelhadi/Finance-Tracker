@@ -11,7 +11,12 @@ import data from "../../Images/data.svg"
 import security from "../../Images/security.svg"
 import message from "../../Images/message.svg"
 import diamond from "../../Images/diamond.svg"
+let index= localStorage.getItem("index")
+let name =JSON.parse(localStorage.getItem("user name"))
+let user_name = name[index]
+
 const UserProfile = () => {
+
   return (
     
         <div className="user__profile__container">
@@ -41,7 +46,7 @@ const UserProfile = () => {
           <img src={userImg} alt="" className='userImg'/>
     </div>
           <div>
-            <p className='userName'>Angela John</p>
+            <p className='userName'>{user_name}</p>
           </div>
           <div className='menu__container_diamond'>
             

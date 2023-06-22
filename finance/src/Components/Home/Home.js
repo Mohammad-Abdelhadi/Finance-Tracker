@@ -10,8 +10,11 @@ import expensesArrow from "../../Images/expensesArrow.svg";
 import upwork from "../../Images/upwork.svg";
 
 
-
-
+let index= localStorage.getItem("index")
+let name =JSON.parse(localStorage.getItem("user name"))
+let user_name = name[index]
+console.log(user_name)
+console.log(user_name)
 const Home = () => {
  
   return (
@@ -34,7 +37,7 @@ const Home = () => {
             <div className="name-container">
               <div>
               <p>Welcome</p>
-              <p>Angela Jone</p>
+              <p>{user_name}</p>
               </div>
               <img src={ring} alt="" />
             </div>

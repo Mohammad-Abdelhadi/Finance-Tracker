@@ -9,8 +9,8 @@ import { useState } from 'react'
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [pass, setpass] = useState("");
+  const [userName, setuserName] = useState("");
   const [con_pass, setcon_pass] = useState("");
-  const [labelEmail, setLabelEmail] = useState("");
   const [isValid, setIsValid] = useState()
   const [isValidPass, setIsValidPass] = useState()
   const [isValidcon_Pass, setIsValidcon_Pass] = useState()
@@ -34,6 +34,11 @@ const Signup = () => {
       
       setIsValidcon_Pass(pass===(e.target.value));
    };
+  const handleChange_user_name = (e) => {
+ 
+      setuserName(e.target.value);
+   
+   };
 
 
 
@@ -41,18 +46,28 @@ const Signup = () => {
       e.preventDefault();
       let Email;
       let Pass;
+      let name;
+
     if(localStorage.getItem('gmail')==null){
       Email=[]
       Pass=[]
+    name=[]
    }
 else{
+
    Email= JSON.parse(localStorage.getItem('gmail') )
    Pass= JSON.parse(localStorage.getItem('Pass') )
+   name= JSON.parse(localStorage.getItem('user name') )
+
 }
-Email.push(email) ;
 Pass.push(pass) ;
+name.push(userName) ;
+Email.push(email) ;
+
 localStorage.setItem("gmail",JSON.stringify(Email))
 localStorage.setItem("Pass",JSON.stringify(Pass))
+localStorage.setItem("user name",JSON.stringify(name))
+
 }
 
 
@@ -71,7 +86,7 @@ localStorage.setItem("Pass",JSON.stringify(Pass))
         <input type='text' placeholder='Enter Email' id='email'   onChange={handleChange} required></input>
         <label id='label_email'style={{ color: isValid ? 'green' : 'red' }}>{isValid ? '' :email==""?"": 'Please enter the valid email format (e.g.example@email.com)'}</label>
         </div>
-     <div><input type='text' placeholder='Create User name' id='user_name' required></input>
+     <div><input type='text' placeholder='Create User name' id='user_name' required onChange={handleChange_user_name}></input>
      
         <label ></label>
      </div>
