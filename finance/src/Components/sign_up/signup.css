@@ -5,22 +5,32 @@
 }
 .input_up{
     margin-top: 15%;
-    margin-left: -20%;
+    margin-left: -15%;
+    
     
 }
-.input_up div input {
+.signUp_form{
+    width: 100%;
+}
+.signUp_form div input {
     padding: 10%;
+    padding-right: 30%;
     background-color: #f2f9ff;
     color: #65b2fa;
-    padding-right: 30%;
    
     border: none;
 }
-.input_up div  label {
-    margin-bottom: 20%;
-    margin-left: 10%;
+.signUp_form div label {
+margin-top: 4%;
+margin-bottom: 7%;
 }
-.input_up div input:focus{
+
+.signUp_form div  {
+ 
+    width: 50%;
+
+}
+.signUp_form  input:focus{
     outline: none;
     
 }
@@ -37,13 +47,32 @@
 
   }
   .btn_Register {
+    
   overflow-wrap:normal ;
   margin-top: -7%;
     margin-bottom: 15%;
-    margin-left: -5%;
+    margin-left: -10%;
     border-radius: 40px;
     padding-left:60% ;
     padding-right:60%;
     background: linear-gradient(180deg, #5DAEFA -17.19%, #0071D9 123.44%);
     box-shadow: 0px 7px 20px  #55adff;
   }
+  .btn_Register a{
+    text-decoration: none;
+    color: #f2f9ff;
+
+  }
+
+
+.sign_up{
+    padding: 10px 30px;
+}
+
+.sign_up input {
+    padding: 20px 50px 20px 15px;
+    background-color: #f2f9ff;
+    color: #65b2fa;
+    padding-right: 30%;
+    border: none;
+}

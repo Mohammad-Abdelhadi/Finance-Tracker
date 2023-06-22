@@ -5,12 +5,10 @@ import { useNavigate } from "react-router-dom";
 
 const Splash = () => {
   const navigate = useNavigate();
-
   useEffect(() => {
     const redirectTimeout = setTimeout(() => {
       navigate("/onboarding"); 
     }, 2000);
-
     return () => clearTimeout(redirectTimeout);
   }, [navigate]);
 

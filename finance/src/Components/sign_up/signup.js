@@ -2,62 +2,97 @@ import React from 'react'
 import facebook from '../../Images/facebook.png'
 import apple from '../../Images/apple.png'
 import google from '../../Images/google.png'
-// import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import './signup.css'
 import { useState } from 'react'
+
 const Signup = () => {
   const [email, setEmail] = useState("");
+  const [pass, setpass] = useState("");
+  const [con_pass, setcon_pass] = useState("");
   const [labelEmail, setLabelEmail] = useState("");
-  const [isValid, setIsValid] = useState(false)
+  const [isValid, setIsValid] = useState()
+  const [isValidPass, setIsValidPass] = useState()
+  const [isValidcon_Pass, setIsValidcon_Pass] = useState()
 
   const handleChange = (e) => {
-    setEmail(e.target.value);
-    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    setIsValid(regex.test(email));
-    console.log(isValid)
-    if(isValid==false){
-      document.getElementById('label_email').style.color='red'
-      setLabelEmail("farah")
-    }
-    else{
-      document.getElementById('label_email').style.color='green'
-      setLabelEmail("correct")
-    }
-  };
+ 
+      setEmail(e.target.value);
+      const regex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+      setIsValid(regex.test(e.target.value));
+     };
+  const handleChange_pass = (e) => {
+ 
+      setpass(e.target.value);
+      const regex =  /^(?=.*\d)(?=.*[A-Z])(?=.*[!#$%&?]).{8,}$/;
+      setIsValidPass(regex.test(e.target.value));
+
+     };
+  const handleChange_con_pass = (e) => {
+ 
+      setcon_pass(e.target.value);
+      
+      setIsValidcon_Pass(pass===(e.target.value));
+   };
+
+
+
+   const onClick=(e)=>{
+      e.preventDefault();
+      let Email;
+      let Pass;
+    if(localStorage.getItem('gmail')==null){
+      Email=[]
+      Pass=[]
+   }
+else{
+   Email= JSON.parse(localStorage.getItem('gmail') )
+   Pass= JSON.parse(localStorage.getItem('Pass') )
+}
+Email.push(email) ;
+Pass.push(pass) ;
+localStorage.setItem("gmail",JSON.stringify(Email))
+localStorage.setItem("Pass",JSON.stringify(Pass))
+}
+
+
+
   return (
     <>
     <div className='container'>
      <div>your Logo</div>
     <div className='d-flex  flex-column align-items-center  input_up'>
-     <div className='sign_up'>
+     <div className='sign_up '>
      <h1>Sign in up</h1>
      <h3>Lorem Ipsum is simply</h3>
      </div>
-     <form  >
-      <div>
-        <input type='text' placeholder='Enter Email' id='email'    onChange={handleChange}></input>
-        <label id='label_email'>{labelEmail}</label>
+     <form  className='signUp_form d-flex  flex-column align-items-center'>
+      <div >
+        <input type='text' placeholder='Enter Email' id='email'   onChange={handleChange} required></input>
+        <label id='label_email'style={{ color: isValid ? 'green' : 'red' }}>{isValid ? '' :email==""?"": 'Please enter the valid email format (e.g.example@email.com)'}</label>
         </div>
-     <div><input type='text' placeholder='Create User name' id='user_name'></input>
+     <div><input type='text' placeholder='Create User name' id='user_name' required></input>
      
-        <label >a</label>
+        <label ></label>
      </div>
-     <div><input type='number' placeholder='Contact number'></input>
-        <label >a</label>
-     
-     </div>
-     <div><input type='password' placeholder='Password' id='pas'></input>
-        <label >a</label>
+     <div><input type='number' placeholder='Contact number' required></input>
+        <label ></label>
      
      </div>
-     <div><input type='password' placeholder='Confrim Password'></input>
-        <label >a</label>
+     <div><input type='password' placeholder='Password' id='pas'  onChange={handleChange_pass} required></input>
+        <label style={{ color: isValidPass ? 'green' : 'red' }}>{isValidPass ? '' :pass==""?"": 'Your password must have 8+ characters, a number, a capital letter and a special character.'} </label>
+     
+     </div>
+     <div><input type='password' placeholder='Confrim Password'  onChange={handleChange_con_pass} required></input>
+        <label style={{ color: isValidcon_Pass ? 'green' : 'red' }}>{isValidcon_Pass ? '' :con_pass==""?"": 'Those passwords didn\'t match. Try again'}</label>
      
      </div>
      <div>
-  
-       <button type="submit" className="btn btn-primary  py-3 btn_Register ">
+
+       <button type="submit" className="btn btn-primary  py-3 btn_Register "  disabled={!(isValid&&isValidPass&&isValidcon_Pass)} onClick={onClick}>
+  <Link to='/signin'>
        Register
+  </Link>
        </button>
     
        </div>

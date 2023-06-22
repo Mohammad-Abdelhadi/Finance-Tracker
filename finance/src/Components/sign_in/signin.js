@@ -4,7 +4,40 @@ import apple from '../../Images/apple.png'
 import google from '../../Images/google.png'
 import {Link} from 'react-router-dom'
 import './signin.css'
+import { useState } from 'react'
 const Signin = () => {
+  const [email, setEmail] = useState("");
+  const [pass, setpass] = useState("");
+  const [isMatchEmail, setIsMatchEmail] = useState();
+  const [isMatchPass, setIsMatchPass] = useState();
+  const [index, setIndex] = useState();
+ 
+  const onChangeEmail = (e) => {
+ 
+    setEmail(e.target.value);
+    setIsMatchEmail(false);
+
+    const storedEmails = JSON.parse(localStorage.getItem('gmail')) || [];
+    if (storedEmails.includes(e.target.value)) {
+      setIndex(storedEmails.indexOf(e.target.value))
+      console.log(index)
+      setIsMatchEmail(true);
+    }
+  };
+
+  const onChangePass = (e) => {
+    setpass(e.target.value);
+    setIsMatchPass(false);
+
+    const storedPasswords = JSON.parse(localStorage.getItem('Pass')) || [];
+    console.log(index)
+console.log(storedPasswords[index])
+    if (storedPasswords[index]==( e.target.value)) {
+      setIsMatchPass(true);
+    }
+  };
+
+
   return (
    <>
    <div className='contain'>
@@ -14,8 +47,8 @@ const Signin = () => {
     <h1>Sign in to</h1>
     <h3>mono</h3>
     </div>
-    <div><input type='text' placeholder='Enter email or user name'></input></div>
-    <div><input type='password' placeholder='Password'></input></div>
+    <div><input type='text' placeholder='Enter email ' onChange={onChangeEmail}></input></div>
+    <div><input type='password' placeholder='Password' onChange={onChangePass}></input></div>
     <div className='forgot_pas'>Forgot password ?</div>
     <div className='have_account'>If you don't have an account 
      <Link to='/signup'>  
@@ -26,11 +59,11 @@ const Signin = () => {
      </div>
     </div> 
     <div>
+      <button type="button" className="btn btn-primary btn_sign_in  py-3" disabled={!(isMatchEmail&&isMatchPass)} >
     <Link to='/HomePage'>  
-      <button type="button" className="btn btn-primary btn_sign_in  py-3">
    Sign In
-      </button>
    </Link>
+      </button>
       </div>
     <div className='continue_with mt-3'>or continue with</div>
     <div className='d-flex justify-content-center gap-3 my-5'>
