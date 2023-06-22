@@ -30,6 +30,10 @@ function Wallet() {
   }, []);
 
   // End code of Function that get the data from FirBase
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="wallet-container">
       <img src={Mobile} alt="" className="phoneBar" />

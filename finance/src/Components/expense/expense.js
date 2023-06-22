@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./expense.css";
 import Time from "../../Images/Time.svg";
 import Battery from "../../Images/Battery.svg";
@@ -50,6 +50,9 @@ const Expense = () => {
 
   // END CODE ADD NEW CATEGORIES TO DATA IN FIREBASE
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <main id="expense__page" className="container">

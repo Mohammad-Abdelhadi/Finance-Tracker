@@ -2,7 +2,6 @@
 import { initializeApp } from "firebase/app";
 // google sign in fast
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
-
 // what we need to import from fire base
 import {  getFirestore } from "firebase/firestore";
 

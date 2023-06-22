@@ -13,14 +13,6 @@ import { Doughnut } from "react-chartjs-2";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../expense/config/firebase";
 
-
-
-
-
-
-
-
-
 const Statistic = () => {
   ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -33,41 +25,43 @@ const Statistic = () => {
       ...doc.data(),
       id: doc.id,
     }));
-    console.log(filterData);  
+    console.log(filterData);
     setCategoriesList(filterData);
   };
   useEffect(() => {
     getCategoriesList();
   }, []);
 
+  // Charts code
 
-// Charts code
+  const topSpendingData = categoriesList
+    .sort((a, b) => b.expense - a.expense)
+    .slice(0, 3)
+    .map((card) => card.expense);
 
-const topSpendingData = categoriesList
-.sort((a, b) => b.expense - a.expense) 
-.slice(0, 3) 
-.map((card) => card.expense); 
+  const topSpendingDataName = categoriesList
+    .sort((a, b) => b.expense - a.expense)
+    .slice(0, 3)
+    .map((card) => card.categories);
 
-const topSpendingDataName = categoriesList
-.sort((a, b) => b.expense - a.expense) 
-.slice(0, 3) 
-.map((card) => card.categories); 
-
-const data = {
-labels: [...topSpendingDataName], 
-datasets: [
-  {
-    label: "poll",
-    data: [ ...topSpendingData], 
-    backgroundColor: ["orange", "black", "red"], 
-    borderColor: ["orange", "black", "red"], 
-  },
-],
-};
+  const data = {
+    labels: [...topSpendingDataName],
+    datasets: [
+      {
+        label: "poll",
+        data: [...topSpendingData],
+        backgroundColor: ["orange", "black", "red"],
+        borderColor: ["orange", "black", "red"],
+      },
+    ],
+  };
 
   const options = {};
-// End Charts code
+  // End Charts code
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <main className="container">
@@ -161,29 +155,28 @@ datasets: [
               <img alt="#" src={Filter} />
             </div>
             <div className="transiction-scroll">
-  {/* start transictions */}
-  {categoriesList
-    .sort((a, b) => b.expense - a.expense) // Sort the transactions in descending order based on expense
-    .map((card) => (
-      <div className="transiction" key={card.id}>
-        <div className="left-side">
-          <div>
-          </div>
-          <div>
-            <h6>{card.categories}</h6>
-            <h6>{card.date}</h6>
-          </div>
-        </div>
-        <div>
-          <p style={{ color: "red" }}>-{card.expense}$</p>
-        </div>
-      </div>
-    ))
-    .slice(0, 3) // Take only the first three transactions after sorting
-  }
-  {/* end transiction */}
-</div>
-           
+              {/* start transictions */}
+              {
+                categoriesList
+                  .sort((a, b) => b.expense - a.expense) // Sort the transactions in descending order based on expense
+                  .map((card) => (
+                    <div className="transiction" key={card.id}>
+                      <div className="left-side">
+                        <div></div>
+                        <div>
+                          <h6>{card.categories}</h6>
+                          <h6>{card.date}</h6>
+                        </div>
+                      </div>
+                      <div>
+                        <p style={{ color: "red" }}>-{card.expense}$</p>
+                      </div>
+                    </div>
+                  ))
+                  .slice(0, 3) // Take only the first three transactions after sorting
+              }
+              {/* end transiction */}
+            </div>
           </div>
         </div>
       </main>
@@ -191,10 +184,4 @@ datasets: [
   );
 };
 
-
 export default Statistic;
-
-
-
-
-

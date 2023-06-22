@@ -12,12 +12,10 @@ import upwork from "../../Images/upwork.svg";
 import { getDocs, collection } from "firebase/firestore";
 import { db } from "./../expense/config/firebase";
 
-
-
 const Home = () => {
-  let index= localStorage.getItem("index")
-  let name =JSON.parse(localStorage.getItem("user name"))
-  let user_name = name[index]
+  let index = localStorage.getItem("index");
+  let name = JSON.parse(localStorage.getItem("user name"));
+  let user_name = name[index];
   // Function that get the data from FirBase
   const [categoriesList, setCategoriesList] = useState([]);
   const expenseCollectionRef = collection(db, "expenses");
@@ -40,6 +38,10 @@ const Home = () => {
   });
 
   // End code of Function that get the data from FirBase
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className="home-container">
