@@ -48,8 +48,8 @@ const UserProfile = () => {
         </div>
         <img src={userImg} alt="" className="userImg" />
       </div>
-      <div>
-        <p className="userName">{user_name}</p>
+      <div  className="userName">
+        <p>{user_name}</p>
       </div>
       <div className="menu__container_diamond">
         <img src={diamond} alt="" className="diamond" />

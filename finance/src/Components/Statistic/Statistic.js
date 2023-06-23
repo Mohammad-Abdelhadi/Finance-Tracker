@@ -51,8 +51,8 @@ const Statistic = () => {
       {
         label: "poll",
         data: [...topSpendingData],
-        backgroundColor: ["#4185c6", "#5dbca4", "#fecf16"],
-        borderColor: ["#4185c6", "#5dbca4", "#fecf16"],
+        backgroundColor: [ "#004dff","#ffda00"  ,"#ff4d33" ],
+        borderColor: ["#004dff","#ffda00"  , "#ff4d33"],
       },
     ],
   };
@@ -65,7 +65,7 @@ const Statistic = () => {
   }, []);
   return (
     <>
-      <main className="container">
+      <main  id="stat-container">
         {/* Mobile Info In top  Statistic page*/}
         <div className="col-12 center__battery">
           <div className="d-flex justify-content-between">
@@ -135,27 +135,23 @@ const Statistic = () => {
           </button>
         </div>
         {/* Charts Container */}
-        <div
-          style={{ width: "350px", height: "300px" }}
-          className="container d-flex justify-content-center mt-5"
+        <div 
+          style={{  }}
+          className="container d-flex justify-content-center mt-5 doughnut-chart"
         >
           <Doughnut data={data} options={options}></Doughnut>
         </div>
         {/* Top spending  */}
-        <div className="container">
-          <div className="transiction-container">
+  
+          <div className="statics__transiction-container">
             <div
-              className="Transiction-history"
-              style={{
-                display: "flex",
-                gap: "0 160px",
-                justifyContent: "start",
-              }}
+              className="statics__Transiction-history"
+              
             >
               <p>Top Spending</p>
               <img alt="#" src={Filter} />
             </div>
-            <div className="transiction-scroll">
+            <div className="transiction-data">
               {/* start transictions */}
               {
                 categoriesList
@@ -163,10 +159,10 @@ const Statistic = () => {
                   .map((card) => (
                     <div
                       style={{ width: "100%" }}
-                      className="transiction"
+                      className="statics__transiction"
                       key={card.id}
                     >
-                      <div className="left-side">
+                      <div className="statics__left-side">
                         <div>
                           <img src={Dollar} alt="#" />
                         </div>
@@ -185,7 +181,7 @@ const Statistic = () => {
               {/* end transiction */}
             </div>
           </div>
-        </div>
+
       </main>
     </>
   );

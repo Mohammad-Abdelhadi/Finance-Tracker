@@ -55,11 +55,12 @@ const Expense = () => {
   }, []);
   return (
     <>
+    <div id="expense__container">
       <main id="expense__page" className="container">
         <div className="row position-relative">
           {/* Mobile Info In top */}
-          <div className="col-12 center__battery">
-            <div className="d-flex justify-content-between">
+          <div className="col-12 center__battery ">
+            <div className="d-flex justify-content-between ">
               <div>
                 <img alt="#" src={Time} />
               </div>
@@ -88,7 +89,7 @@ const Expense = () => {
           </div>
         </div>
         {/* Cards that includes Form and input */}
-        <form className="position-absolute z-1 center__cards p-3">
+        <form className="position-absolute z-1 center__cards px-3 ">
           <div className="my-3">
             <label htmlFor="process">Process :</label>
             <select
@@ -130,7 +131,7 @@ const Expense = () => {
               onChange={handleamount}
             />
           </div>
-          <div className="my-3">
+          <div className="my-4">
             <label htmlFor="date">Date:</label>
             <input
               id="date"
@@ -144,14 +145,15 @@ const Expense = () => {
           </div>
         </form>
         {/* Button Add  */}
-        <div className="container position-absolute add__btn">
-          <div className="my-3">
+        <div className="container add__btn ">
+          <div className="my-2">
             <button className="btn w-100 " onClick={onSubmitExpense}>
               Add
             </button>
           </div>
         </div>
       </main>
+      </div>
     </>
   );
 };

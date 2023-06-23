@@ -1,7 +1,7 @@
 .text{
     text-align:center;
     font-size:xx-large;
-    margin-top: 2rem;
+    margin-top: 3rem;
     color: #0071D9;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
     }
@@ -17,6 +17,7 @@
 
         font-size: 14px;
         margin-right: 1rem;
+        margin-top: 1rem;
  
     }
     .log_in{
@@ -26,9 +27,48 @@
     .onboarding-container{
         background-image: url(../../Images/onboardingback.svg);
         height:500px;
+        max-width: 425px;
      
     }
     .man__img{
      margin-top: 2rem ; 
       width: 50%;
     }
+    @media (min-width :375px) and (max-width:424px){
+   
+        .text{
+           
+            margin-top: 3.5rem;
+            color: #0071D9;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+            }
+            .have_account{
+
+                font-size: 14px;
+                margin-right: 1rem;
+                margin-top: 0.2rem;
+         
+            }
+      }
+      @media (min-width :320px) and (max-width:375px){
+        
+        .man__img{
+            margin-top: 2rem ; 
+             width: 60%;
+        }
+        
+        
+        .text{
+           
+            margin-top: 4.5rem;
+            color: #0071D9;
+            font-size: 24px;
+            }
+            .have_account{
+
+                font-size: 12px;
+                margin-right: 1rem;
+                margin-top: 0.2rem;
+         
+            }
+      }

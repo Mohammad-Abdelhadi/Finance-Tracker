@@ -21,7 +21,7 @@ const Navbar = () => {
     <Nav
     activeKey="home"
    
-    className="navbar fixed-bottom navbar-light bg-light "
+    className="navbar fixed-bottom navbar-light bg-light  "
   >
     <Nav.Item>
       <Link to="homepage">

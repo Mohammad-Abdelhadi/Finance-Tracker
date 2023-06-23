@@ -1,7 +1,7 @@
 .navbar-container{
     background-color: rgb(255, 255, 255);
-   padding: 0.7rem 0 0.7rem 0;
-   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    padding: 0.7rem 0 0.7rem 0;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -11,13 +11,14 @@
 .navbar{
     background-color: #ffffff !important;
     padding: 1.2rem 0 1.2rem 0;
+    max-width: 425px;
     
 }
 .plus{
     position: absolute;
-left: 9rem;
-bottom: 0.6rem;
-width:130px;
+    left: 9rem;
+    bottom: 0.6rem;
+    width:130px;
 }
 .chart{
     margin-right:2rem;
@@ -33,11 +34,17 @@ width:130px;
     margin-right: 1rem;
 }
 
-@media (width:375){
+@media (min-width :375px) and (max-width:425px) {
+
     .plus{
-        position: absolute;
-    left: 2rem;
-    bottom: 0.6rem;
-    width:130px;
+    left: 32%;
     }
+
+}
+@media (min-width :319px) and (max-width:374px) {
+
+    .plus{
+    left: 30%;
+    }
+
 }

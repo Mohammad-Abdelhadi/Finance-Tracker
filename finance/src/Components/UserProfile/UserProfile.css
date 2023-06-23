@@ -1,3 +1,7 @@
+.user__profile__container{
+    max-width: 425px;
+}
+
 .user__profile__top {
     background-image: url(../../Images/topBackground.svg);
 
@@ -27,7 +31,7 @@
     gap: 7rem;
     line-height: 1rem;
     color: #fff;
-    margin-top: 2.5rem;
+    margin-top: 3rem;
     font-size: 24px;
 }
 
@@ -37,18 +41,21 @@
 }
 
 .user__profile__container__name div :nth-child(2) {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
 }
 
 .userImg {
     position: absolute;
     top: 13rem;
-    left: 8.8rem;
+    left: 8.5rem;
 }
 
 .userName {
-    margin: 4.5rem 0 0 11.55rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
     font-size: 24px;
     font-weight: 600;
 }
@@ -94,4 +101,41 @@
 .menu__container_last p {
     font-weight: 500;
     font-size: 18px;
+}
+
+@media (min-width :375px) and (max-width:425px) {
+
+    .user__profile__container__name {
+        gap: 6rem;
+ 
+    }
+    .userImg {
+        position: absolute;
+        top: 13rem;
+        left: 30%;
+    }
+   
+ 
+}
+
+@media (min-width :318px) and (max-width:374px) {
+
+    .user__profile__container__name {
+        gap: 4rem;
+        font-size: 20px;
+    }
+    .userImg {
+        position: absolute;
+        top: 13rem;
+        left: 26%;
+    }
+    .user__profile__container__charge {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 10.5rem;
+      
+    } 
+   
+ 
 }

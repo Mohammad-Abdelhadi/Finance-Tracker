@@ -64,14 +64,14 @@ const Signup = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="sign-up-container">
         <div className="singup-logo">your Logo</div>
         <div className="d-flex  flex-column align-items-center  input_up">
           <div className="sign_up ">
             <h1>Sign up</h1>
           </div>
-          <form className="signUp_form d-flex  flex-column align-items-center">
-            <div>
+          <form className="signUp_form">
+            <div className="inputs__form">
               <input
                 type="text"
                 placeholder="Enter Email"
@@ -89,8 +89,7 @@ const Signup = () => {
                   ? ""
                   : "Please enter the valid email format (e.g.example@email.com)"}
               </label>
-            </div>
-            <div>
+           
               <input
                 type="text"
                 placeholder="Enter Username"
@@ -100,7 +99,7 @@ const Signup = () => {
               ></input>
 
               <label></label>
-            </div>
+          
             {/* <div>
               <input
                 type="number"
@@ -109,7 +108,7 @@ const Signup = () => {
               ></input>
               <label></label>
             </div> */}
-            <div>
+          
               <input
                 type="password"
                 placeholder="Password"
@@ -124,8 +123,7 @@ const Signup = () => {
                   ? ""
                   : "Your password must have 8+ characters, a number, a capital letter and a special character."}{" "}
               </label>
-            </div>
-            <div>
+      
               <input
                 type="password"
                 placeholder="Confrim Password"

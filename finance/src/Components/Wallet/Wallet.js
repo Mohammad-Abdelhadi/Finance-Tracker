@@ -73,8 +73,7 @@ function Wallet() {
             </div>
           </div>
           <div className="transictions-details">Transactions</div>
-          <div className="transiction-scroll">
-            {/* start transictions */}
+        
             <div className="transiction-scroll">
               {/* start transictions */}
               {categoriesList
@@ -90,7 +89,7 @@ function Wallet() {
                         <h6>{card.date}</h6>
                       </div>
                     </div>
-                    <div>
+                    <div className="rigth-side">
                       <p style={{ color: "red" }}>-{card.expense}$</p>
                     </div>
                   </div>
@@ -98,8 +97,7 @@ function Wallet() {
               {/* end transiction */}
             </div>
 
-            {/* end transiction */}
-          </div>
+           
         </div>
       </div>
     </div>

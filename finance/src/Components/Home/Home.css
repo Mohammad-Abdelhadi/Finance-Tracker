@@ -5,6 +5,9 @@ box-sizing: border-box;
 p{
     margin-bottom: 0 !important ;
 }
+.home-container{
+    max-width: 425px;
+}
 .top{
     background-image: url(../../Images/topBackground.svg);
   
@@ -35,7 +38,6 @@ height: 287px;
   
 }
 .charge-container p{
-    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     color: #fff;
 }
@@ -43,7 +45,7 @@ height: 287px;
     display: flex;
     align-items: center ;
     justify-content: space-around;
-    gap: 7rem;
+    gap: 10rem;
     line-height: 1rem;
     color: #fff;
     margin-top: 0.5rem;
@@ -110,20 +112,20 @@ margin-top:0.4rem;
     margin-top: 0.7rem;
 }
 
-.transiction-container{
+.home__transiction-container{
     margin-top: 6rem;
-    max-width: 100%;
+    max-width: 85%;
     
     margin: 6rem auto;
 }
-.Transiction-history{
+.home__Transiction-history{
     display: flex;
     justify-content: space-between;
 }
-.Transiction-history :nth-child(1){
+.home__Transiction-history :nth-child(1){
     font-weight: 500;
 }
-.Transiction-history :nth-child(2){
+.home__Transiction-history :nth-child(2){
     color: rgb(117, 117, 117);
 }
 .transiction__homepage{
@@ -133,15 +135,15 @@ margin-top:0.4rem;
     margin-top: 1rem;
     width: 100%;
 }
-.left-side{
+.home__left-side{
     display: flex;
     gap: 1rem;
     align-items: center;
 }
-.left-side div :nth-child(1) {
+.home__left-side div :nth-child(1) {
   font-weight: 500;
 }
-.left-side div :nth-child(2) {
+.home__left-side div :nth-child(2) {
   
   color: rgb(117, 117, 117);
   font-size: 12px;

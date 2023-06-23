@@ -21,6 +21,7 @@ function App() {
   || location.pathname ==="/signin" || location.pathname ==="/signup") ;
 
   return (
+    
     <div className="App">
 
       <Routes>

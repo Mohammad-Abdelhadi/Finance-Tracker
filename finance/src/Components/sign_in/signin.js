@@ -74,7 +74,7 @@ const Signin = () => {
         <div >
           <button
             type="button"
-            className="btn btn-primary btn_sign_in  py-3"
+            className="btn btn-primary btn_sign_in"
             disabled={!(isMatchEmail && isMatchPass)}
             onClick={onClick}
           >
@@ -83,9 +83,9 @@ const Signin = () => {
         </div>
         <div className="continue_with mt-1">or continue with</div>
         <div className="d-flex justify-content-center gap-3 my-4">
-          <img src={facebook} width="10%" />
-          <img src={apple} width="10%" />
-          <img src={google} width="10%" />
+          <img src={facebook} width="10%" alt="" />
+          <img src={apple} width="10%" alt="" />
+          <img src={google} width="10%" alt=""/>
         </div>
       </div>
     </>

@@ -100,8 +100,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="transiction-container">
-          <div className="Transiction-history">
+        <div className="home__transiction-container">
+          <div className="home__Transiction-history">
             <p>Transiction history</p>
             <p>see all</p>
           </div>
@@ -110,7 +110,7 @@ const Home = () => {
             .map((value) => {
               return (
                 <div className="transiction__homepage" key={value.id}>
-                  <div className="left-side">
+                  <div className="home__left-side">
                     <div>
                       <img src={upwork} alt="" />
                     </div>
