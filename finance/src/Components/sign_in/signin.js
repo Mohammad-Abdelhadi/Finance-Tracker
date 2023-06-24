@@ -5,6 +5,9 @@ import google from "../../Images/google.png";
 import { Link } from "react-router-dom";
 import "./signin.css";
 import { useState } from "react";
+import logo from '../../Images/logo.png'
+
+
 const Signin = () => {
   const [email, setEmail] = useState("");
   const [pass, setpass] = useState("");
@@ -43,11 +46,13 @@ const Signin = () => {
   return (
     <>
       <div className="contain">
-        <div className="signin-logo">your Logo</div>
+        <div className="signin-logo">
+          <img src={logo} alt="" />
+          <div className="logo-name">FlowFinance</div>
+        </div>
         <div className="d-flex align-items-center flex-column  input">
           <div className="sign_mono">
-            <h1>Sign in to</h1>
-            <h3>mono</h3>
+            <h1>Sign in </h1>
           </div>
           <div className="signin-inputs-div" >
             <input

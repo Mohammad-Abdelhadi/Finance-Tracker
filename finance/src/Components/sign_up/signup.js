@@ -5,6 +5,8 @@ import google from "../../Images/google.png";
 import { Link } from "react-router-dom";
 import "./signup.css";
 import { useState } from "react";
+import logo from '../../Images/logo.png'
+
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -65,7 +67,10 @@ const Signup = () => {
   return (
     <>
       <div className="sign-up-container">
-        <div className="singup-logo">your Logo</div>
+        <div className="singup-logo">
+        <img src={logo} alt="" />
+          <div className="signup-logo-name">FlowFinance</div>
+        </div>
         <div className="d-flex  flex-column align-items-center  input_up">
           <div className="sign_up ">
             <h1>Sign up</h1>
