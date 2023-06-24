@@ -10,34 +10,55 @@ import expensesArrow from "../../Images/expensesArrow.svg";
 import upwork from "../../Images/upwork.svg";
 // import from firebase to get data
 import { getDocs, collection } from "firebase/firestore";
+import { useLocation } from "react-router-dom";
+
 import { db } from "./../expense/config/firebase";
+import Dollar from "../../Images/dollar-coin-svgrepo-com.svg";
+
+
 
 const Home = () => {
+  // get the sum of income and expenses.
+  const [sumIncome, setSumIncome] = useState(0);
+  const [sumExpense, setSumExpense] = useState(0);
+// defualt balance is 0 , and its changes depend in the income - out come
+  const  {balance}  = {balance: 0}  ;
+  const totalBalance =(sumExpense+ sumIncome)-balance;
+
+  
   let index = localStorage.getItem("index");
   let name = JSON.parse(localStorage.getItem("user name"));
   let user_name = name[index];
-  // Function that get the data from FirBase
+
   const [categoriesList, setCategoriesList] = useState([]);
   const expenseCollectionRef = collection(db, "expenses");
+
   const getCategoriesList = async () => {
     const data = await getDocs(expenseCollectionRef);
     const filterData = data.docs.map((doc) => ({
       ...doc.data(),
       id: doc.id,
     }));
-    console.log(filterData);
     setCategoriesList(filterData);
   };
+
   useEffect(() => {
     getCategoriesList();
   }, []);
 
-  let sumExpense = 0;
-  categoriesList.forEach((card) => {
-    sumExpense += card.expense;
-  });
-
-  // End code of Function that get the data from FirBase
+  useEffect(() => {
+    let tempSumIncome = 0;
+    let tempSumExpense = 0;
+    categoriesList.forEach((card) => {
+      if (card.expense > 0) {
+        tempSumIncome += card.expense;
+      } else {
+        tempSumExpense += card.expense;
+      }
+    });
+    setSumIncome(tempSumIncome);
+    setSumExpense(tempSumExpense);
+  }, [categoriesList]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -78,7 +99,7 @@ const Home = () => {
                   <img src={dots} alt="" />
                 </div>
               </div>
-              <p className="balance">${sumExpense}</p>
+              <p className="balance">${totalBalance}</p>
               <div className="expense-container">
                 <div className="income">
                   <img src={incomeArrow} alt="" />
@@ -91,10 +112,10 @@ const Home = () => {
               </div>
               <div className="expenses-values">
                 <div className="income-value">
-                  <p>$1840.00</p>
+                <p>${sumIncome.toFixed(2)}</p>
                 </div>
                 <div className="expense-value">
-                  <p>$284.00</p>
+                <p>${Math.abs(sumExpense).toFixed(2)}</p>
                 </div>
               </div>
             </div>
@@ -108,11 +129,16 @@ const Home = () => {
           {categoriesList
             .sort((a, b) => new Date(b.date) - new Date(a.date))
             .map((value) => {
+
+              const isIncome = value.expense > 0;
+              const formattedExpense = isIncome ? "+" : "-";
+              const expenseValue = isIncome ? value.expense : Math.abs(value.expense);
+              const amountColor = isIncome ? "green" : "red";
               return (
                 <div className="transiction__homepage" key={value.id}>
                   <div className="home__left-side">
                     <div>
-                      <img src={upwork} alt="" />
+                      <img src={Dollar} alt="" />
                     </div>
                     <div>
                       <p>{value.categories}</p>
@@ -120,7 +146,10 @@ const Home = () => {
                     </div>
                   </div>
                   <div>
-                    <p style={{ color: "red" }}>-${value.expense}</p>
+                  <p style={{ color: amountColor }}>
+                      {formattedExpense}${expenseValue.toFixed(2)}
+                      {/* {formattedExpense}${expenseValue.toFixed(2)} */}
+                    </p>
                   </div>
                 </div>
               );

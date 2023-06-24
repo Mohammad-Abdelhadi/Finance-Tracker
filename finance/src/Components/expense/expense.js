@@ -16,6 +16,7 @@ const Expense = () => {
   const options = [
     { value: "", text: "--Choose an option--" },
     { value: "car", text: "Car" },
+    { value: "salary", text: "salary" },
     { value: "bill", text: "Bill" },
     { value: "rent", text: "Rent" },
     { value: "education", text: "Education" },
@@ -25,11 +26,15 @@ const Expense = () => {
   // Target Select Value
   const [selected, setSelected] = useState(options[0].value);
   const handleChange = (event) => {
-    console.log(event.target.value);
     setSelected(event.target.value);
   };
   // Target Date input
+  const [selectedProcess, setSelectedProcess] = useState("");
+  const handleProcessChange = (event) => {
+    setSelectedProcess(event.target.value);
+  };
   const [selectedDate, setSelectedDate] = useState("");
+
 
   //  Target Amount input Value
 
@@ -37,22 +42,28 @@ const Expense = () => {
   const handleamount = (e) => {
     setExpenseValue(e.target.value);
   };
+
   console.log(expenseValue);
 
   const onSubmitExpense = async () => {
-    const expense = parseFloat(expenseValue);
+    const expense = Number(expenseValue);
     await addDoc(expenseCollectionRef, {
       categories: selected,
-      expense: expense,
+      // i change this to target the correct income process
+      // the value of the selected process become (income-outcome)
+      // and i make function for the selcted process to target the value 
+
+      expense: selectedProcess === "income" ? expense : -expense,
       date: selectedDate,
     });
   };
-
   // END CODE ADD NEW CATEGORIES TO DATA IN FIREBASE
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  
+
   return (
     <>
     <div id="expense__container">
@@ -96,10 +107,13 @@ const Expense = () => {
               id="process"
               className="form-select mt-2"
               aria-label="Default select example"
+              value={selectedProcess}
+              onChange={handleProcessChange}
+              required
             >
               <option selected>Choose Your Process</option>
-              <option value="1">Income</option>
-              <option value="2">Expense</option>
+              <option value="income">Income</option>
+              <option value="expense">Expense</option>
             </select>
           </div>
           <div className="my-3">
@@ -125,7 +139,7 @@ const Expense = () => {
             <input
               id="amount"
               type="number"
-              className="form-control mt-2"
+              className={`form-control mt-2 `}
               aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-default"
               onChange={handleamount}
@@ -141,15 +155,25 @@ const Expense = () => {
               aria-describedby="inputGroup-sizing-default"
               value={selectedDate}
               onChange={(e) => setSelectedDate(e.target.value)}
+              required
+
             />
           </div>
         </form>
         {/* Button Add  */}
-        <div className="container add__btn ">
+        <div className="container add__btn  ">
           <div className="my-2">
-            <button className="btn w-100 " onClick={onSubmitExpense}>
-              Add
-            </button>
+            <Link to="/homepage" >
+
+          <button
+  className="btn w-100 "
+  onClick={onSubmitExpense}
+  disabled={!selectedProcess || !selected || !selectedDate || !expenseValue}
+  
+>
+  Add
+</button>
+            </Link>
           </div>
         </div>
       </main>

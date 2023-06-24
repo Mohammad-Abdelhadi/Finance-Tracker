@@ -11,6 +11,8 @@ import { Link } from "react-router-dom";
 // import from firebase to get data
 import { getDocs, collection } from "firebase/firestore";
 import { db } from "./../expense/config/firebase";
+import Dollar from "../../Images/dollar-coin-svgrepo-com.svg";
+
 
 function Wallet() {
   // Function that get the data from FirBase
@@ -22,7 +24,6 @@ function Wallet() {
       ...doc.data(),
       id: doc.id,
     }));
-    console.log(filterData);
     setCategoriesList(filterData);
   };
   useEffect(() => {
@@ -34,6 +35,18 @@ function Wallet() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  let sumIncome = 0;
+  let sumExpense = 0;
+
+  categoriesList.forEach((card) => {
+    if (card.expense > 0) {
+      sumIncome += card.expense;
+    } else {
+      sumExpense += card.expense;
+    }
+  });
+
+  const totalBalance = sumIncome + sumExpense;
   return (
     <div className="wallet-container">
       <img src={Mobile} alt="" className="phoneBar" />
@@ -52,7 +65,7 @@ function Wallet() {
         <div className="second-background">
           <div className="Content">
             <p className="normal-text">Total Balance</p>
-            <p className="wallet-balance">$2,549.00</p>
+            <p className="wallet-balance">${totalBalance.toFixed(2)}</p>
           </div>
           <div className="Transictions">
             <div className="internal-content">
@@ -82,7 +95,7 @@ function Wallet() {
                   <div className="transiction" key={card.id}>
                     <div className="left-side">
                       <div>
-                        <img src={upwork} alt="" />
+                        <img src={Dollar} alt="" />
                       </div>
                       <div>
                         <h6>{card.categories}</h6>
@@ -90,7 +103,9 @@ function Wallet() {
                       </div>
                     </div>
                     <div className="rigth-side">
-                      <p style={{ color: "red" }}>-{card.expense}$</p>
+                    <p style={{ color: card.expense > 0 ? "green" : "red" }}>
+                      {card.expense > 0 ? "+" : "-"}${Math.abs(card.expense).toFixed(2)}
+                    </p>
                     </div>
                   </div>
                 ))}

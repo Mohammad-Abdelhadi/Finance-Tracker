@@ -36,23 +36,18 @@ const Statistic = () => {
   // Charts code
 
   const topSpendingData = categoriesList
-    .sort((a, b) => b.expense - a.expense)
-    .slice(0, 3)
-    .map((card) => card.expense);
-
-  const topSpendingDataName = categoriesList
-    .sort((a, b) => b.expense - a.expense)
-    .slice(0, 3)
-    .map((card) => card.categories);
+    .filter((card) => card.expense < 0) // Filter expenses (negative values)
+    .sort((a, b) =>  a.expense -b.expense)
+    .slice(0, 3);
 
   const data = {
-    labels: [...topSpendingDataName],
+    labels: topSpendingData.map((card) => card.categories),
     datasets: [
       {
         label: "poll",
-        data: [...topSpendingData],
-        backgroundColor: [ "#004dff","#ffda00"  ,"#ff4d33" ],
-        borderColor: ["#004dff","#ffda00"  , "#ff4d33"],
+        data: topSpendingData.map((card) => card.expense),
+        backgroundColor: ["#004dff", "#ffda00", "#ff4d33"],
+        borderColor: ["#004dff", "#ffda00", "#ff4d33"],
       },
     ],
   };
@@ -65,7 +60,7 @@ const Statistic = () => {
   }, []);
   return (
     <>
-      <main  id="stat-container">
+      <main id="stat-container">
         {/* Mobile Info In top  Statistic page*/}
         <div className="col-12 center__battery">
           <div className="d-flex justify-content-between">
@@ -101,87 +96,83 @@ const Statistic = () => {
         </div>
         {/* Choose The Time btn*/}
         <div
-          class="btn-group-horizontal mx-2 my-5"
+          className="btn-group-horizontal mx-2 my-5"
           role="group"
           aria-label="Options"
         >
           <button
             type="button"
-            class="btn btn-outline-primary border-0 btn-radio mx-3"
+            className="btn btn-outline-primary border-0 btn-radio mx-3"
             style={{ color: "black" }}
           >
             Day
           </button>
           <button
             type="button"
-            class="btn btn-outline-primary border-0 btn-radio mx-3"
+            className="btn btn-outline-primary border-0 btn-radio mx-3"
             style={{ color: "black" }}
           >
             Week
           </button>
           <button
             type="button"
-            class="btn btn-outline-primary border-0 btn-radio mx-3"
+            className="btn btn-outline-primary border-0 btn-radio mx-3"
             style={{ color: "black" }}
           >
             Month
           </button>
           <button
             type="button"
-            class="btn btn-outline-primary border-0 btn-radio mx-3"
+            className="btn btn-outline-primary border-0 btn-radio mx-3"
             style={{ color: "black" }}
           >
             Year
           </button>
         </div>
         {/* Charts Container */}
-        <div 
-          style={{  }}
+        <div
+          style={{}}
           className="container d-flex justify-content-center mt-5 doughnut-chart"
         >
           <Doughnut data={data} options={options}></Doughnut>
         </div>
         {/* Top spending  */}
-  
-          <div className="statics__transiction-container">
-            <div
-              className="statics__Transiction-history"
-              
-            >
-              <p>Top Spending</p>
-              <img alt="#" src={Filter} />
-            </div>
-            <div className="transiction-data">
-              {/* start transictions */}
-              {
-                categoriesList
-                  .sort((a, b) => b.expense - a.expense)
-                  .map((card) => (
-                    <div
-                      style={{ width: "100%" }}
-                      className="statics__transiction"
-                      key={card.id}
-                    >
-                      <div className="statics__left-side">
-                        <div>
-                          <img src={Dollar} alt="#" />
-                        </div>
-                        <div>
-                          <h6>{card.categories}</h6>
-                          <h6>{card.date}</h6>
-                        </div>
-                      </div>
-                      <div>
-                        <p style={{ color: "red" }}>-${card.expense}</p>
-                      </div>
-                    </div>
-                  ))
-                  .slice(0, 3) // Take only the first three transactions after sorting
-              }
-              {/* end transiction */}
-            </div>
+        <div className="statics__transiction-container">
+          <div className="statics__Transiction-history">
+            <p>Top Spending</p>
+            <img alt="#" src={Filter} />
           </div>
-
+          <div className="transiction-data">
+            {/* start transictions */}
+            {topSpendingData.map((card) => (
+              <div
+                style={{ width: "100%" }}
+                className="statics__transiction"
+                key={card.id}
+              >
+                <div className="statics__left-side">
+                  <div>
+                    <img src={Dollar} alt="#" />
+                  </div>
+                  <div>
+                    <h6>{card.categories}</h6>
+                    <h6>{card.date}</h6>
+                  </div>
+                </div>
+                <div>
+                  <p style={{ color: "red" }}>
+{/* if i dont type the math.abs , he will got value like this ( -$-250) */}
+{/* so i put before that the minus sign (-)  */}
+                    {/* -${Math.abs(card.expense)} */}
+                    {/* to fixed to got float value like this 250.00  */}
+                    -${Math.abs(card.expense).toFixed(2)}
+                  </p>
+                </div>
+              </div>
+            ))}
+            {/* end transiction */}
+          </div>
+        </div>
       </main>
     </>
   );

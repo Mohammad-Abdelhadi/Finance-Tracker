@@ -14,6 +14,7 @@
     margin-left: 1.9rem;
 }
 
+
 .text__edit {
     text-decoration: none;
     color: white;
@@ -48,12 +49,18 @@
  
 
 }
-
+.green-input {
+    color: green;
+  }
+  
+  .red-input {
+    color: red;
+  }
 
 .add__btn button {
     color: #fff;
     margin-bottom: 150px;
-   
+   border:none
 }
 
 .center__battery {

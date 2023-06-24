@@ -7,15 +7,14 @@ import {  getFirestore } from "firebase/firestore";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAZSegnu8qAHXDEWGR_IhqVsNuQI5AcT5Q",
-  authDomain: "finance-tracker-test-30d7b.firebaseapp.com",
-  projectId: "finance-tracker-test-30d7b",
-  storageBucket: "finance-tracker-test-30d7b.appspot.com",
-  messagingSenderId: "690720910479",
-  appId: "1:690720910479:web:eb728c2f644235524ed4fa",
-  measurementId: "G-0ZE3SMET7B"
+  apiKey: "AIzaSyAnsZTEs2WmdvgwgwxXf1lzwvrUA_8f63Q",
+  authDomain: "finance-project-4fade.firebaseapp.com",
+  databaseURL: "https://finance-project-4fade-default-rtdb.firebaseio.com",
+  projectId: "finance-project-4fade",
+  storageBucket: "finance-project-4fade.appspot.com",
+  messagingSenderId: "645390668992",
+  appId: "1:645390668992:web:de834261d797a09dc6c925"
 };
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
