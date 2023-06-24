@@ -4,7 +4,7 @@ import topBackground from "./UserProfile.css";
 import ring from "../../Images/ring.svg";
 import charge from "../../Images/charge.svg";
 import ArrowBack from "../../Images/ArrowBack.svg";
-import userImg from "../../Images/userImg.svg";
+import userimgnew from "../../Images/userimgnew.svg";
 import userIcon from "../../Images/userIcon.svg";
 import twousericon from "../../Images/twousericon.svg";
 import data from "../../Images/data.svg";
@@ -12,6 +12,7 @@ import security from "../../Images/security.svg";
 import message from "../../Images/message.svg";
 import diamond from "../../Images/diamond.svg";
 import { Link } from "react-router-dom";
+import userBackground from '../../Images/userBackground.svg'
 
 const UserProfile = () => {
   let index = localStorage.getItem("index");
@@ -26,7 +27,7 @@ const UserProfile = () => {
       <div
         className="user__profile__top"
         style={{
-          backgroundImage: `url(${topBackground})`,
+          backgroundImage: `url(${userBackground})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
@@ -46,7 +47,9 @@ const UserProfile = () => {
             <img src={ring} alt="" />
           </div>
         </div>
-        <img src={userImg} alt="" className="userImg" />
+        <div className="user_img_div">
+        <img src={userimgnew} alt="" className="userImg" />
+        </div>
       </div>
       <div  className="userName">
         <p>{user_name}</p>

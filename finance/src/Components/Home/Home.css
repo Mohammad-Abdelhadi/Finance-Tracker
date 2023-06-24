@@ -45,7 +45,7 @@ height: 287px;
     display: flex;
     align-items: center ;
     justify-content: space-around;
-    gap: 10rem;
+    gap: 11.25rem;
     line-height: 1rem;
     color: #fff;
     margin-top: 0.5rem;
@@ -148,7 +148,7 @@ margin-top:0.4rem;
   color: rgb(117, 117, 117);
   font-size: 12px;
 }
-@media (max-width:375px) {
+@media (min-width:375px) and (max-width:424px) {
     .warpper{
         position: absolute;
         top: 9rem;
@@ -176,7 +176,43 @@ margin-top:0.4rem;
     }
     .name-container{
         margin-top: 1.5rem;
-        gap: 2.2rem;
+        gap: 9rem;
+        
+    }
+    .name-container div :nth-child(2){
+        font-size: 22px;
+
+    }
+}
+@media (min-width:219px) and (max-width:374px) {
+    .warpper{
+        position: absolute;
+        top: 9rem;
+        left: 1.5rem;
+    }
+    .profile-info-container{
+        max-width: 85%;
+    }
+    .balance-container{
+        gap: 3rem;
+    }
+    .balance{
+        font-size: 24px;
+    }
+    .expense-container{
+        gap:1rem;
+        font-size: 14px;
+    }
+    .expenses-values{
+        font-size: 16px;
+        gap: 5rem;
+    }
+    .charge-container{
+        gap: 8rem;
+    }
+    .name-container{
+        margin-top: 1.5rem;
+        gap: 7rem;
         
     }
     .name-container div :nth-child(2){

@@ -152,9 +152,9 @@ const Signup = () => {
         </div>
         <div className="continue_with mt-3">or continue with</div>
         <div className="d-flex justify-content-center gap-3 my-3">
-          <img src={facebook} width="10%" />
-          <img src={apple} width="10%" />
-          <img src={google} width="10%" />
+          <img src={facebook} width="10%" alt=""/>
+          <img src={apple} width="10%" alt="" />
+          <img src={google} width="10%"  alt=""/>
         </div>
       </div>
     </>

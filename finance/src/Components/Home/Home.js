@@ -7,7 +7,6 @@ import dots from "../../Images/dots.svg";
 import whitearrow from "../../Images/whitearrow.svg";
 import incomeArrow from "../../Images/incomeArrow.svg";
 import expensesArrow from "../../Images/expensesArrow.svg";
-import upwork from "../../Images/upwork.svg";
 // import from firebase to get data
 import { getDocs, collection } from "firebase/firestore";
 import { useLocation } from "react-router-dom";
@@ -21,7 +20,7 @@ const Home = () => {
   // get the sum of income and expenses.
   const [sumIncome, setSumIncome] = useState(0);
   const [sumExpense, setSumExpense] = useState(0);
-// defualt balance is 0 , and its changes depend in the income - out come
+// defualt balance is 0 , and its changes depend in the income - outcome
   const  {balance}  = {balance: 0}  ;
   const totalBalance =(sumExpense+ sumIncome)-balance;
 

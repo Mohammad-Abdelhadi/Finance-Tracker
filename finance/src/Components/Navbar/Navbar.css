@@ -17,11 +17,12 @@
 .plus{
     position: absolute;
     left: 9rem;
-    bottom: 0.6rem;
+    bottom: 0.1rem;
     width:130px;
 }
 .chart{
     margin-right:2rem;
+    
 }
 .home{
     margin-left: 1rem;
@@ -37,14 +38,43 @@
 @media (min-width :375px) and (max-width:425px) {
 
     .plus{
-    left: 32%;
+    left: 34%;
+    width: 33%;
+    }
+    .chart{
+        
+        width: 45%;
+    }
+    .home{
+        width: 55%;
+    }
+    
+    .wallet{
+        width: 45%;
+    }
+    .user{
+        width: 55%;
     }
 
 }
 @media (min-width :319px) and (max-width:374px) {
 
     .plus{
-    left: 30%;
+    left: 33%;
+    width: 33%;
     }
-
+    .chart{
+        
+        width: 45%;
+    }
+    .home{
+        width: 55%;
+    }
+    
+    .wallet{
+        width: 45%;
+    }
+    .user{
+        width: 55%;
+    }
 }

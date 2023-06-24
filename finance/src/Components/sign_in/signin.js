@@ -49,7 +49,7 @@ const Signin = () => {
             <h1>Sign in to</h1>
             <h3>mono</h3>
           </div>
-          <div >
+          <div className="signin-inputs-div" >
             <input
               type="text"
               placeholder="Enter email "
@@ -81,7 +81,7 @@ const Signin = () => {
             <Link to="/HomePage">Sign In</Link>
           </button>
         </div>
-        <div className="continue_with mt-1">or continue with</div>
+        <div className="signin-continue_with mt-1">or continue with</div>
         <div className="d-flex justify-content-center gap-3 my-4">
           <img src={facebook} width="10%" alt="" />
           <img src={apple} width="10%" alt="" />

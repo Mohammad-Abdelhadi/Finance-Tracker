@@ -3,9 +3,9 @@
 }
 
 .user__profile__top {
-    background-image: url(../../Images/topBackground.svg);
+    background-image: url(../../Images/userBackground.svg);
 
-    height: 287px;
+    height: 200px;
     position: relative;
 }
 
@@ -13,7 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    gap: 14rem;
+    gap: 17rem;
     padding-top: 0.5rem;
 
 }
@@ -40,15 +40,17 @@
     line-height: 2rem;
 }
 
-.user__profile__container__name div :nth-child(2) {
-    font-size: 20px;
-    font-weight: 400;
-}
 
-.userImg {
+.user_img_div{
     position: absolute;
-    top: 13rem;
-    left: 8.5rem;
+
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+.userImg {
+padding-top: 1.2rem;
 }
 
 .userName {
@@ -73,7 +75,7 @@
     align-items: center;
     gap: 1.5rem;
     margin-left: 1.5rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
     border-bottom: solid 1px #b8b8b8;
     max-width: 85%;
     padding-bottom: 1rem;
@@ -109,12 +111,14 @@
         gap: 6rem;
  
     }
-    .userImg {
-        position: absolute;
-        top: 13rem;
-        left: 30%;
-    }
    
+    .user__profile__container__charge {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 12.5rem;
+      
+    } 
  
 }
 
@@ -124,11 +128,7 @@
         gap: 4rem;
         font-size: 20px;
     }
-    .userImg {
-        position: absolute;
-        top: 13rem;
-        left: 26%;
-    }
+    
     .user__profile__container__charge {
         display: flex;
         align-items: center;
