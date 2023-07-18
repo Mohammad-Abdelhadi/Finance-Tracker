@@ -28,13 +28,14 @@ const Expense = () => {
   const handleChange = (event) => {
     setSelected(event.target.value);
   };
-  // Target Date input
+  // target the selected process ( income ,  expenses)
   const [selectedProcess, setSelectedProcess] = useState("");
   const handleProcessChange = (event) => {
     setSelectedProcess(event.target.value);
   };
+  
+  // Target Date input
   const [selectedDate, setSelectedDate] = useState("");
-
 
   //  Target Amount input Value
 
@@ -49,7 +50,7 @@ const Expense = () => {
     const expense = Number(expenseValue);
     await addDoc(expenseCollectionRef, {
       categories: selected,
-      // i change this to target the correct income process
+      // i change this to target the correct  process
       // the value of the selected process become (income-outcome)
       // and i make function for the selcted process to target the value 
 
